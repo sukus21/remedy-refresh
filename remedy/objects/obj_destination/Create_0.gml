@@ -2,3 +2,4 @@
 //obj_destination:
 noentry = 0;
 cyc = 0;
+overridedir = 0;
