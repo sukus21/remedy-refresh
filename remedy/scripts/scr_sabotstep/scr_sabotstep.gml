@@ -401,29 +401,27 @@ function scr_sabotstep() {
 	    global.flashr=lowestr;
 	    global.flashg=lowestg;
 	    global.flashb=lowestb;
-	    }
+	}
+	
 	//Background color
-	if (global.flashr>0){
-	    global.flashr-=global.flashspeed;
-	    if (global.flashr<=0)
-	        global.flashr=0;
-	    if (global.flashr<=lowestr)
-	        global.flashr=lowestr;
-	    }
-	if (global.flashg>0){
-	    global.flashg-=global.flashspeed;
-	    if (global.flashg<=0)
-	        global.flashg=0;
-	    if (global.flashg<=lowestg)
-	        global.flashg=lowestg;
-	    }
-	if (global.flashb>0){
-	    global.flashb-=global.flashspeed;
-	    if (global.flashb<=0)
-	        global.flashb=0;
-	    if (global.flashb<=lowestb)
-	        global.flashb=lowestb;
-	    }
+	global.flashr-=global.flashspeed;
+	if (global.flashr<=0)
+	   global.flashr=0;
+	if (global.flashr<=lowestr)
+	   global.flashr=lowestr;
+		
+	global.flashg-=global.flashspeed;
+	if (global.flashg<=0)
+	   global.flashg=0;
+	if (global.flashg<=lowestg)
+	   global.flashg=lowestg;
+		
+	global.flashb-=global.flashspeed;
+	if (global.flashb<=0)
+	   global.flashb=0;
+	if (global.flashb<=lowestb)
+	   global.flashb=lowestb;
+			  
 	if (global.flashr>=250)
 	    global.flashr=250;
 	if (global.flashg>=250)
