@@ -57,8 +57,11 @@ function scr_endsabotdraw() {
 	        transitioncyc=0;
 	        transitioncyc2=0;
 	        //First intro
-	        if (global.firstintro!=1 && global.finalbossdead!=1)
-	            obj_you.ignoreall=0;
+	        if (global.firstintro!=1 && global.finalbossdead!=1) {
+	            if (instance_exists(obj_you)) {
+					obj_you.ignoreall=0;
+				}
+			}
 	        else if (global.firstintro==1){
 	            extratransition=1;
 	            global.firstintro=2;
