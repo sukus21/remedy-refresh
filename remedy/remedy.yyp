@@ -65,6 +65,7 @@
     {"id":{"name":"spr_text","path":"sprites/spr_text/spr_text.yy",},},
     {"id":{"name":"spr_text2","path":"sprites/spr_text2/spr_text2.yy",},},
     {"id":{"name":"spr_text3","path":"sprites/spr_text3/spr_text3.yy",},},
+    {"id":{"name":"scr_audio","path":"scripts/scr_audio/scr_audio.yy",},},
     {"id":{"name":"spr_pause","path":"sprites/spr_pause/spr_pause.yy",},},
     {"id":{"name":"spr_pause2","path":"sprites/spr_pause2/spr_pause2.yy",},},
     {"id":{"name":"spr_battlescreen","path":"sprites/spr_battlescreen/spr_battlescreen.yy",},},

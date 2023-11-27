@@ -42,6 +42,7 @@
     {"name":"spr_text","order":2,"path":"sprites/spr_text/spr_text.yy",},
     {"name":"spr_text2","order":3,"path":"sprites/spr_text2/spr_text2.yy",},
     {"name":"spr_text3","order":4,"path":"sprites/spr_text3/spr_text3.yy",},
+    {"name":"scr_audio","order":8,"path":"scripts/scr_audio/scr_audio.yy",},
     {"name":"spr_pause","order":5,"path":"sprites/spr_pause/spr_pause.yy",},
     {"name":"spr_pause2","order":6,"path":"sprites/spr_pause2/spr_pause2.yy",},
     {"name":"spr_battlescreen","order":7,"path":"sprites/spr_battlescreen/spr_battlescreen.yy",},
