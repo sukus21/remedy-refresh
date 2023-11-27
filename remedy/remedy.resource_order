@@ -311,6 +311,7 @@
     {"name":"rom_battle12","order":11,"path":"rooms/rom_battle12/rom_battle12.yy",},
     {"name":"rom_battle14","order":1,"path":"rooms/rom_battle14/rom_battle14.yy",},
     {"name":"rom_battle15","order":2,"path":"rooms/rom_battle15/rom_battle15.yy",},
+    {"name":"scr_transition","order":7,"path":"scripts/scr_transition/scr_transition.yy",},
     {"name":"rom_battle16","order":3,"path":"rooms/rom_battle16/rom_battle16.yy",},
     {"name":"rom_battle17","order":4,"path":"rooms/rom_battle17/rom_battle17.yy",},
     {"name":"rom_battle18","order":5,"path":"rooms/rom_battle18/rom_battle18.yy",},
