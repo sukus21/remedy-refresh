@@ -16,7 +16,7 @@ global.mobile_button_scale = 1;
 
 //Mobile inputs, not auto-generated
 #macro MOBILE_DEVICE_COUNT 10
-global.is_mobile = true;//(os_type == os_android or os_type == os_ios);
+global.is_mobile = (os_type == os_android or os_type == os_ios);
 global.mobile_lock = 0;
 global.mobile_up = false;
 global.mobile_down = false;
