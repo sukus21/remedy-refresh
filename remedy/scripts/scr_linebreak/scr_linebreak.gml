@@ -15,7 +15,7 @@ function scr_linebreak(argument0, argument1) {
 	if (pflen>0){
 	    for (pfi=0;pfi<pflen;pfi+=1){
 	        pfchar=ord(string_char_at(pfnewtext,pfi+1))-32;
-	        pfx+=global.pf[pfchar];
+	        pfx+=8;
 	        if (pfchar==3){
 	            textrows+=1;
 	            pfx=0;

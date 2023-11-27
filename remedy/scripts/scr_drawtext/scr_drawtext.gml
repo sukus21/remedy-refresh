@@ -21,7 +21,7 @@ function scr_drawtext(argument0, argument1, argument2, argument3, argument4) {
 	            }
 	        else{
 	            draw_sprite(pffont,pfchar,pfx2,pfy2)
-	            pfx2+=global.pf[pfchar];
+	            pfx2+=argument3;
 	            }
 	        }
 	    }
