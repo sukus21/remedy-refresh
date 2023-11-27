@@ -1,0 +1,88 @@
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_sabotstep\scr_sabotstep.gml
+Converted builtin - line 434: background_color=global.bgcolor -> __background_set_colour( global.bgcolor )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_endsabotstep\scr_endsabotstep.gml
+String not found: ConversionLog_ConvertedString 120 "/10 \Regen#" "/10 \\Regen#"
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_youstep\scr_youstep.gml
+String not found: ConversionLog_ConvertedString 95 "All chests in East and West Hurtland have been opened!#$>12 <1 @2 \4 &4" "All chests in East and West Hurtland have been opened!#$>12 <1 @2 \\4 &4"
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_youinteract\scr_youinteract.gml
+String not found: ConversionLog_ConvertedString 105 "$$$You got a \!##Regeneration power#$$$$increased." "$$$You got a \\!##Regeneration power#$$$$increased."
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_pausestep\scr_pausestep.gml
+String not found: ConversionLog_ConvertedString 279 "\ Regen#" "\\ Regen#"
+String not found: ConversionLog_ConvertedString 356 "\ Regen#How quickly you regenerate hearts in Healing Mode." "\\ Regen#How quickly you regenerate hearts in Healing Mode."
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_battlesabotstep\scr_battlesabotstep.gml
+Converted builtin - line 397: background_color=global.bgcolor -> __background_set_colour( global.bgcolor )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_xview\scr_xview.gml
+Converted builtin - line 4: view_xview[0] -> __view_get( e__VW.XView, 0 )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_yview\scr_yview.gml
+Converted builtin - line 4: view_yview[0] -> __view_get( e__VW.YView, 0 )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_wview\scr_wview.gml
+Converted builtin - line 4: view_wview[0] -> __view_get( e__VW.WView, 0 )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_hview\scr_hview.gml
+Converted builtin - line 4: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_setxview\scr_setxview.gml
+Converted builtin - line 4: view_xview[0]=argument0 -> __view_set( e__VW.XView, 0, argument0 )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_setyview\scr_setyview.gml
+Converted builtin - line 4: view_yview[0]=argument0 -> __view_set( e__VW.YView, 0, argument0 )
+
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\objects\obj_breaksabot\Draw_0.gml
+Converted builtin - line 66: background_color=global.bgcolor -> __background_set_colour( global.bgcolor )
+
+Missing audiogroup for sound: 'snd_openchest' - setting to default audio group
+Missing audiogroup for sound: 'snd_back' - setting to default audio group
+Missing audiogroup for sound: 'snd_select' - setting to default audio group
+Missing audiogroup for sound: 'snd_throwflask' - setting to default audio group
+Missing audiogroup for sound: 'snd_flaskexplo' - setting to default audio group
+Missing audiogroup for sound: 'snd_hitenemy' - setting to default audio group
+Missing audiogroup for sound: 'snd_explo' - setting to default audio group
+Missing audiogroup for sound: 'snd_bossexplo' - setting to default audio group
+Missing audiogroup for sound: 'snd_warp' - setting to default audio group
+Missing audiogroup for sound: 'snd_failure' - setting to default audio group
+Missing audiogroup for sound: 'snd_victory' - setting to default audio group
+Missing audiogroup for sound: 'snd_enemyshot' - setting to default audio group
+Missing audiogroup for sound: 'snd_enterbattle' - setting to default audio group
+Missing audiogroup for sound: 'snd_healmode' - setting to default audio group
+Missing audiogroup for sound: 'snd_hurt' - setting to default audio group
+Missing audiogroup for sound: 'snd_fire' - setting to default audio group
+Missing audiogroup for sound: 'snd_empty' - setting to default audio group
+Missing audiogroup for sound: 'snd_hype' - setting to default audio group
+Game speed set to 30
+Added compatibility script 'background\draw_background.gml'
+Added compatibility script 'background\__background_set_colour.gml'
+Added compatibility script 'instance\instance_create.gml'
+Added compatibility script 'joystick\joystick_check_button.gml'
+Added compatibility script 'joystick\joystick_direction.gml'
+Added compatibility script 'joystick\joystick_exists.gml'
+Added compatibility script 'joystick\joystick_has_pov.gml'
+Added compatibility script 'joystick\joystick_pov.gml'
+Added compatibility script 'joystick\__joystick_2_gamepad.gml'
+Added compatibility script 'object\object_get_depth.gml'
+Added compatibility script 'sound\sound_add.gml'
+Added compatibility script 'sound\sound_loop.gml'
+Added compatibility script 'sound\sound_play.gml'
+Added compatibility script 'sound\sound_stop.gml'
+Added compatibility script 'sound\sound_stop_all.gml'
+Added compatibility script 'sound\sound_volume.gml'
+Added compatibility script 'view\__view_get.gml'
+Added compatibility script 'view\__view_set.gml'
+Added compatibility script 'view\__view_set_internal.gml'
+Added compatibility script 'background\__init_background.gml'
+Added compatibility script 'joystick\__init_joystick.gml'
+Added compatibility script 'view\__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script 'background\__background_get_colour_element.gml'
+Added compatibility script 'background\__background_set_element.gml'
+Added compatibility script 'joystick\joystick_process_events.gml'
+Added compatibility script 'joystick\joystick_xpos.gml'
+Added compatibility script 'joystick\joystick_ypos.gml'
+Added compatibility script '__global_object_depths.gml'
