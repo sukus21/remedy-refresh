@@ -133,7 +133,7 @@ function scr_battlesabotstep() {
 	        }
 	    }
 
-	scr_joy();
+	scr_joy(0);
 	scr_input();
 
 	//Pause/abort

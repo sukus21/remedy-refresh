@@ -10,7 +10,7 @@ function scr_pausestep() {
 	    }
 
 	if (tier!=2)
-	    scr_joy();
+	    scr_joy(0);
 	scr_input();
 
 	//get ready
