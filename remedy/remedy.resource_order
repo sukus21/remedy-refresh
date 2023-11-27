@@ -1,12 +1,9 @@
 {
   "FolderOrderSettings": [
-    {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
-    {"name":"Fonts","order":8,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":11,"path":"folders/Objects.yy",},
     {"name":"data","order":1,"path":"folders/Objects/data.yy",},
     {"name":"particles","order":2,"path":"folders/Objects/particles.yy",},
-    {"name":"Paths","order":5,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":12,"path":"folders/Rooms.yy",},
     {"name":"battle","order":8,"path":"folders/Rooms/battle.yy",},
     {"name":"world2","order":1,"path":"folders/Rooms/battle/world2.yy",},
@@ -33,15 +30,11 @@
     {"name":"joy","order":6,"path":"folders/Scripts/joy.yy",},
     {"name":"save","order":3,"path":"folders/Scripts/save.yy",},
     {"name":"text","order":1,"path":"folders/Scripts/text.yy",},
-    {"name":"Sequences","order":10,"path":"folders/Sequences.yy",},
-    {"name":"Shaders","order":7,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":4,"path":"folders/Sounds.yy",},
     {"name":"boss","order":3,"path":"folders/Sprites/boss.yy",},
     {"name":"enemies","order":1,"path":"folders/Sprites/enemies.yy",},
     {"name":"particles","order":2,"path":"folders/Sprites/particles.yy",},
     {"name":"tilesets","order":18,"path":"folders/Sprites/tilesets.yy",},
-    {"name":"Tile Sets","order":3,"path":"folders/Tile Sets.yy",},
-    {"name":"Timelines","order":9,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_textbubble2","order":1,"path":"sprites/spr_textbubble2/spr_textbubble2.yy",},
