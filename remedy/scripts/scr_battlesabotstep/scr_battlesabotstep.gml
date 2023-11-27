@@ -128,7 +128,7 @@ function scr_battlesabotstep() {
 	                if (type==10 || type==1)
 	                    active=1;
 	                }
-	            layer=3;
+	            var_layer=3;
 	            bossoff=0;
 	            }
 	        }
@@ -188,7 +188,7 @@ function scr_battlesabotstep() {
 	    }
 
 	//Boss advance
-	if (bossdead[1] && bossdead[2] && bossdead[3] && layer==0 && !advance && obj_battleyou.hp>0 && !failure){
+	if (bossdead[1] && bossdead[2] && bossdead[3] && var_layer==0 && !advance && obj_battleyou.hp>0 && !failure){
 	    advance=1;
 	    obj_battleyou.superregen=1;
 	    advancecyc=0;
@@ -201,7 +201,7 @@ function scr_battlesabotstep() {
 	        instance_create(x,y,obj_puff);
 	        }
 	    }
-	else if (bossdead[4] && bossdead[5] && bossdead[6] && layer==1 && !advance && obj_battleyou.hp>0 && !failure){
+	else if (bossdead[4] && bossdead[5] && bossdead[6] && var_layer==1 && !advance && obj_battleyou.hp>0 && !failure){
 	    advance=1;
 	    obj_battleyou.superregen=1;
 	    advancecyc=0;
@@ -214,7 +214,7 @@ function scr_battlesabotstep() {
 	        instance_create(x,y,obj_puff);
 	        }
 	    }
-	else if (bossdead[7] && bossdead[8] && bossdead[9] && layer==2 && !advance && obj_battleyou.hp>0 && !failure){
+	else if (bossdead[7] && bossdead[8] && bossdead[9] && var_layer==2 && !advance && obj_battleyou.hp>0 && !failure){
 	    advance=1;
 	    obj_battleyou.superregen=1;
 	    advancecyc=0;
@@ -234,7 +234,7 @@ function scr_battlesabotstep() {
 	        obj_battleyou.speed=0;
 	    advancecyc+=1;
 	    //Go to layer 3
-	    if (layer==2){
+	    if (var_layer==2){
 	        if (advancecyc==1)
 	            scr_stopmusic();
 	        if (advancecyc==30){
@@ -258,7 +258,7 @@ function scr_battlesabotstep() {
 	            obj_battleyou.superregen=0;
 	            obj_battleyou.resetignoreall=2;
 	            obj_battleyou.attackcyc=0;
-	            layer+=1;
+	            var_layer+=1;
 	            with (obj_bossenemy){
 	                if (type==10 || type==11)
 	                    active=1;
@@ -275,9 +275,9 @@ function scr_battlesabotstep() {
 	            }
 	        if (advancecyc==170){
 	            horishake=0;
-	            if (layer==0)
+	            if (var_layer==0)
 	                bossoff=280;
-	            else if (layer==1)
+	            else if (var_layer==1)
 	                bossoff=140;
 	            }
 	        if (advancecyc==200){
@@ -285,20 +285,20 @@ function scr_battlesabotstep() {
 	            obj_battleyou.superregen=0;
 	            obj_battleyou.resetignoreall=2;
 	            obj_battleyou.attackcyc=0;
-	            layer+=1;
-	            if (layer==1){
+	            var_layer+=1;
+	            if (var_layer==1){
 	                with (obj_bossenemy){
 	                    if (type==4 || type==5 || type==6)
 	                        active=1;
 	                    }
 	                }
-	            else if (layer==2){
+	            else if (var_layer==2){
 	                with (obj_bossenemy){
 	                    if (type==7 || type==8 || type==9)
 	                        active=1;
 	                    }
 	                }
-	            else if (layer==3){
+	            else if (var_layer==3){
 	                with (obj_bossenemy){
 	                    if (type==10 || type==11)
 	                        active=1;
