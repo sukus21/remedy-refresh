@@ -4,6 +4,7 @@ type = 0;
 
 
 //Below are the original contents of the file.
+event_inherited();
 x+=8;
 y+=8;
 sprite_index=spr_enemy;
