@@ -25,32 +25,27 @@ function scr_pausestep() {
 	        if (global.pauseselected<=4){
 	            obj_you.resetignoreall=2;
 	            instance_destroy();
-	            if (global.sound)
-	                sound_play(snd_back);
+	            sfx_play(snd_back);
 	            }
 	        else if (global.pauseselected==5){
 	            tier=1;
 	            global.pauseselected=0;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (global.pauseselected==6 && !justsaved){
-	            if (global.sound)
-	                sound_play(snd_warp);
+	            sfx_play(snd_warp);
 	            justsaved=1;
 	            scr_save();
 	            }
 	        else if (global.pauseselected==7){
 	            if (quitprompt==0){
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                quitprompt=1;
 	                subselected=0;
 	                }
 	            else{
 	                if (subselected==0){
-	                    if (global.sound)
-	                        sound_play(snd_back);
+	                    sfx_play(snd_back);
 	                    quitprompt=0;
 	                    }
 	                else{
@@ -65,36 +60,42 @@ function scr_pausestep() {
 	                    obj_you.quitignoreall=1;
 	                    obj_sabot.transition=2;
 	                    obj_sabot.quitgame=1;
-	                    if (global.sound)
-	                        sound_play(snd_select);
+	                    sfx_play(snd_select);
 	                    }
 	                }
 	            }
 	        }
 	    else if (tier==1){
+			if(!global.is_mobile) {
+		        if (global.pauseselected == 1) {
+		            scr_fullscreen(1, !scr_fullscreen(0, 0));
+		            sfx_play(snd_select);
+		        }
+		        else if (global.pauseselected == 2) {
+					global.windowed = option_advance(global.windowed+1, 8, 1);
+		            if (!scr_fullscreen(0, 0)) scr_scalewindow();
+		            sfx_play(snd_select);
+		        }
+			}
+			else {
+				//Input scale
+				if(global.pauseselected == 1) {
+					sfx_play(snd_select);
+					global.mobile_button_scale = option_advance(global.mobile_button_scale + 0.1, 2.0, 0.2);
+				}
+
+				//Input height
+				else if(global.pauseselected == 2) {
+					sfx_play(snd_select);
+					global.mobile_button_height = option_advance(global.mobile_button_height + 0.1, 1.0, 0.0);
+				}
+			}
+			
 	        if (global.pauseselected==0){
 	            scr_saveoptions();
 	            tier=0;
 	            global.pauseselected=5;
-	            if (global.sound)
-	                sound_play(snd_back);
-	            }
-	        else if (global.pauseselected==1){
-	            if (scr_fullscreen(0,0))
-	                scr_fullscreen(1,0);
-	            else
-	                scr_fullscreen(1,1);
-	            if (global.sound)
-	                sound_play(snd_select);
-	            }
-	        else if (global.pauseselected==2){
-	            global.windowed+=1;
-	            if (global.windowed>8)
-	                global.windowed=1;
-	            if (scr_fullscreen(0,0)==0)
-	                scr_scalewindow();
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_back);
 	            }
 	        else if (global.pauseselected==3){
 	            global.playmusic=1-global.playmusic;
@@ -118,28 +119,23 @@ function scr_pausestep() {
 	                        sound_loop(global.music[9]);
 	                    }
 	                }
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (global.pauseselected==4){
 	            global.sound=1-global.sound;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (global.pauseselected==5){
 	            global.autosave=1-global.autosave;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (global.pauseselected==6){
 	            global.alwaysrun=1-global.alwaysrun;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (global.pauseselected==7){
 	            global.fliprun=1-global.fliprun;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (global.pauseselected==8){
 	            tier=2;
@@ -150,8 +146,7 @@ function scr_pausestep() {
 	            global.joyleft=99;
 	            global.joyright=99;
 	            global.pauseselected=0;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        }
 	    else if (tier==2){
@@ -159,12 +154,10 @@ function scr_pausestep() {
 	            tier=1;
 	            global.pauseselected=8;
 	            if (assign==4){
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else{
-	                if (global.sound)
-	                    sound_play(snd_back);
+	                sfx_play(snd_back);
 	                global.joyup=99;
 	                global.joydown=99;
 	                global.joyleft=99;
@@ -174,29 +167,45 @@ function scr_pausestep() {
 	        }
 	    }
 
-	//left and right on window size
-	if (ready && !quitignoreall){
-	    if (tier==1 && global.pauseselected==2){
-	        if (pressleft && !pressleftprev){
-	            global.windowed-=1;
-	            if (global.windowed<1)
-	                global.windowed=8;
-	            if (scr_fullscreen(0,0)==0)
-	                scr_scalewindow();
-	            if (global.sound)
-	                sound_play(snd_select);
-	            }
-	        else if (pressright && !pressrightprev){
-	            global.windowed+=1;
-	            if (global.windowed>8)
-	                global.windowed=1;
-	            if (scr_fullscreen(0,0)==0)
-	                scr_scalewindow();
-	            if (global.sound)
-	                sound_play(snd_select);
+	//Sliders
+	if (ready && !quitignoreall and tier == 1) {
+		if(!global.is_mobile) {
+		    if (global.pauseselected==2){
+		        if (pressleft && !pressleftprev){
+		            global.windowed-=1;
+		            if (global.windowed<1)
+		                global.windowed=8;
+		            if (scr_fullscreen(0,0)==0)
+		                scr_scalewindow();
+		            sfx_play(snd_select);
+		            }
+		        else if (pressright && !pressrightprev){
+		            global.windowed+=1;
+		            if (global.windowed>8)
+		                global.windowed=1;
+		            if (scr_fullscreen(0,0)==0)
+		                scr_scalewindow();
+		            sfx_play(snd_select);
 	            }
 	        }
 	    }
+		else {
+			var _slide = (pressright and !pressrightprev) - (pressleft and !pressleftprev);
+			//Button scale
+			if(global.pauseselected == 1 and _slide != 0) {
+				global.mobile_button_scale = option_advance(global.mobile_button_scale + _slide * 0.10, 2.0, 0.2)
+				sfx_play(snd_select);
+				global.mobile_lock = 10;
+			}
+				
+			//Button height
+			else if(global.pauseselected == 2 and _slide != 0) {
+				global.mobile_button_height = option_advance(global.mobile_button_height + _slide*0.10, 1.0, 0);
+				sfx_play(snd_select);
+				global.mobile_lock = 10;
+			}
+		}
+	}
 
 	//move marker
 	if (tier!=2 && ready && !quitignoreall && !quitprompt && pressup && !pressupprev){
@@ -213,8 +222,7 @@ function scr_pausestep() {
 	                global.pauseselected=7;
 	            }
 	        }
-	    if (global.sound)
-	       sound_play(snd_select);
+	    sfx_play(snd_select);
 	    }
 	else if (tier!=2 && ready && !quitignoreall && !quitprompt && pressdown && !pressdownprev){
 	    global.pauseselected+=1;
@@ -226,16 +234,14 @@ function scr_pausestep() {
 	        if ((global.pauseselected==8 && !global.joystickexists) || (global.pauseselected==9 && global.joystickexists))
 	            global.pauseselected=0;
 	        }
-	    if (global.sound)
-	        sound_play(snd_select);
+	    sfx_play(snd_select);
 	    }
 
 	//move submarker
 	if (quitprompt){
 	    if (ready && !quitignoreall && ((pressleft && !pressleftprev) || (pressright && !pressrightprev))){
 	        subselected=1-subselected;
-	        if (global.sound)
-	            sound_play(snd_select);
+	        sfx_play(snd_select);
 	        }
 	    }
 
@@ -295,14 +301,21 @@ function scr_pausestep() {
 	    else
 	        textstring+="#$}"+timestring;
 	    }
-	else if (tier==1){
-	    textstring="Back#Fullscreen ";
-	    if (scr_fullscreen(0,1))
-	        textstring+="ON#"
-	    else
-	        textstring+="OFF#"    
-	    textstring+="Windowed size x"+string(global.windowed)+"#";    
-	    textstring+="Music ";
+	else if (tier == 1) {
+		textstring = "Back#";
+		if(!global.is_mobile) {
+		    textstring += "Fullscreen ";
+			textstring += scr_fullscreen(0, 1) ? "ON#" : "OFF#";   
+		    textstring += "Windowed size x" + string(global.windowed) + "#";
+		}
+		else {
+			textstring += "Input scale  ";
+			textstring += titlesabot_percent(global.mobile_button_scale) + "#";
+			textstring += "Input height ";
+			textstring += titlesabot_percent(global.mobile_button_height) + "#";
+		}
+
+		textstring+="Music ";
 	    if (global.playmusic)
 	        textstring+="ON#"
 	    else
