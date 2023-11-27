@@ -12,3 +12,4 @@ text = 0;
 aftertexts = 0;
 aftertext = 0;
 battle = 0;
+battletag = 0;
