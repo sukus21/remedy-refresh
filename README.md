@@ -4,7 +4,7 @@ A port of [Princess Remedy In a World of Hurt](https://remar.se/daniel/remedy.ph
 This is a fan project.
 The Princess Remedy series is owned by [Remar Games](https://remar.se/daniel/) and [Ludosity](https://ludosity.com/).
 
-The Master branch is a raw port of the original source, with minimal changes.
-Only modifications critical to get the game running are present in this branch.
+This branch contains a crude port to Android.
+It adds on-screen buttons, and swaps out the fullscreen settings for input-related ones.
 
-As an example of what modern GameMaker allows for this game, check out the "mobile" branch, where I have ported the Game to Android.
+To build for Android with GameMaker, check out [this article](https://help.gamemaker.io/hc/en-us/articles/115001368727-Setting-Up-For-Android).
