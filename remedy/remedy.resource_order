@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings": [
+    {"name":"Music","order":14,"path":"folders/Music.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":11,"path":"folders/Objects.yy",},
     {"name":"data","order":1,"path":"folders/Objects/data.yy",},
@@ -35,7 +36,6 @@
     {"name":"enemies","order":1,"path":"folders/Sprites/enemies.yy",},
     {"name":"particles","order":2,"path":"folders/Sprites/particles.yy",},
     {"name":"tilesets","order":18,"path":"folders/Sprites/tilesets.yy",},
-    {"name":"Music","order":14,"path":"folders/Music.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_textbubble2","order":1,"path":"sprites/spr_textbubble2/spr_textbubble2.yy",},

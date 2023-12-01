@@ -11,6 +11,7 @@
   },
   "defaultScriptType": 1,
   "Folders": [
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Music.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"data","folderPath":"folders/Objects/data.yy",},
@@ -51,7 +52,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"enemies","folderPath":"folders/Sprites/enemies.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"particles","folderPath":"folders/Sprites/particles.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"tilesets","folderPath":"folders/Sprites/tilesets.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Music.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
