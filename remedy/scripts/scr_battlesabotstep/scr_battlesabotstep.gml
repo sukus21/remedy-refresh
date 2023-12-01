@@ -2,8 +2,7 @@ function scr_battlesabotstep() {
 	if (!init){
 	    init=1;
 	    scr_joycreate();
-	    if (global.difficulty==2)
-	        room_speed=40;
+		game_set_speed(global.difficulty == 2 ? 40 : 30, gamespeed_fps);
 	    if (global.difficulty==2)
 	        speeddif=1.6;
 	    else
