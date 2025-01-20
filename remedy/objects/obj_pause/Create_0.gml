@@ -59,3 +59,5 @@ pfhor = 0;
 textrows = 0;
 pfnewtext = 0;
 sdone = 0;
+
+scr_pausestep();
