@@ -1,5 +1,5 @@
 function scr_youstep() {
-	scr_joy();
+	scr_joy(0);
 	scr_input();
 
 	//Reset ignoreall

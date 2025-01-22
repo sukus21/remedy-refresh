@@ -1,5 +1,5 @@
 function scr_battleyoustep() {
-	scr_joy();
+	scr_joy(0);
 	scr_input();
 
 	//Regen

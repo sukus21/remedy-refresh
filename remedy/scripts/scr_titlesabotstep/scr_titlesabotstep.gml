@@ -1,6 +1,6 @@
 function scr_titlesabotstep() {
 	if (tier!=4)
-	    scr_joy();
+	    scr_joy(0);
 	scr_input();
 
 	if (pressescape && !pressescapeprev){

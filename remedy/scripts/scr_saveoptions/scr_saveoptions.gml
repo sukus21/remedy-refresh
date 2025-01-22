@@ -1,7 +1,7 @@
 function scr_saveoptions() {
 	fileid=file_text_open_write("options.sav");
 
-	if (scr_fullscreen())
+	if (scr_fullscreen(0, 0))
 	    global.fullscreen=1;
 	else
 	    global.fullscreen=0;
