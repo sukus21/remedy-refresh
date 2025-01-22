@@ -53,3 +53,17 @@ if (global.is_mobile) {
 		}
 	}
 }
+
+// Makes settings a bit smoother
+if (global.mobile_lock > 0) {
+	if (!(global.mobile_up or global.mobile_down or global.mobile_left or global.mobile_right)) {
+		global.mobile_lock = 0;
+	}
+	else {
+		global.mobile_lock--;
+		global.mobile_up = false;
+		global.mobile_down = false;
+		global.mobile_left = false;
+		global.mobile_right = false;
+	}
+}

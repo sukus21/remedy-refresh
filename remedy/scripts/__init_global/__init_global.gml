@@ -14,6 +14,7 @@ function __init_global() {
 #macro MOBILE_SETTINGS_VERSION 1
 global.mobile_button_height = 0.8;
 global.mobile_button_scale = 1;
+global.mobile_lock = 0;
 
 // Mobile inputs, not auto-generated
 #macro MOBILE_DEVICE_COUNT 10

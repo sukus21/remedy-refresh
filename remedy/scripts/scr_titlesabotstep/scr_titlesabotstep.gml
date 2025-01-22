@@ -117,6 +117,35 @@ function scr_titlesabotstep() {
 			
 	        // options
 	        else if (tier == TITLESABOT_TIER.OPTIONS) {
+				if (!global.is_mobile) {
+					// Fullscreen
+		            if (selected == 1) {
+						scr_fullscreen(1, !window_get_fullscreen());
+		                sfx_play(snd_select);
+		            }
+				
+					// Window size
+		            else if (selected == 2) {
+		                global.windowed++;
+		                if (global.windowed > 8) global.windowed = 1;
+					
+		                if (!window_get_fullscreen()) scr_scalewindow();
+		                sfx_play(snd_select);
+		            }
+				}
+				else {
+					// Input scale
+					if (selected == 1) {
+						sfx_play(snd_select);
+						global.mobile_button_scale = option_advance(global.mobile_button_scale + 0.1, 2.0, 0.2);
+					}
+					
+					// Input height
+					else if (selected == 2) {
+						sfx_play(snd_select);
+						global.mobile_button_height = option_advance(global.mobile_button_height + 0.1, 1.0, 0.0);
+					}
+				}
 				
 				// Back
 	            if (selected == 0) {
@@ -124,21 +153,6 @@ function scr_titlesabotstep() {
 	                selected = 2;
 	                sfx_play(snd_back);
 	                scr_saveoptions();
-	            }
-				
-				// Fullscreen
-	            else if (selected == 1) {
-					scr_fullscreen(1, !window_get_fullscreen());
-	                sfx_play(snd_select);
-	            }
-				
-				// Window size
-	            else if (selected == 2) {
-	                global.windowed++;
-	                if (global.windowed > 8) global.windowed = 1;
-					
-	                if (!window_get_fullscreen()) scr_scalewindow();
-	                sfx_play(snd_select);
 	            }
 				
 				// Music toggle
@@ -256,7 +270,7 @@ function scr_titlesabotstep() {
 	    // Sliders
 		var _slide = (pressright and !pressrightprev) - (pressleft and !pressleftprev);
 		if (_slide != 0 and tier == TITLESABOT_TIER.OPTIONS) {
-			if(!global.is_mobile) {
+			if (!global.is_mobile) {
 				
 				// Window size
 				if (selected == 2) {
@@ -269,16 +283,17 @@ function scr_titlesabotstep() {
 			else {
 				
 				// Button scale
-				if(selected == 1) {
-					global.mobile_button_scale += _slide * 0.10;
-					global.mobile_button_scale = clamp(global.mobile_button_scale, 0.2, 2.0);
+				if (selected == 1) {
+					global.mobile_button_scale = option_advance(global.mobile_button_scale + _slide*0.10, 2.0, 0.2);
 					sfx_play(snd_select);
+					global.mobile_lock = 10;
 				}
 				
 				// Button height
-				else if(selected == 2) {
+				else if (selected == 2) {
 					global.mobile_button_height = option_advance(global.mobile_button_height + _slide*0.10, 1.0, 0);
 					sfx_play(snd_select);
+					global.mobile_lock = 10;
 				}
 			}
 	    }
