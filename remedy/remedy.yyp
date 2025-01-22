@@ -292,6 +292,7 @@
     {"id":{"name":"rom_battle4","path":"rooms/rom_battle4/rom_battle4.yy",},"order":3,},
     {"id":{"name":"rom_battle5","path":"rooms/rom_battle5/rom_battle5.yy",},"order":4,},
     {"id":{"name":"rom_battle6","path":"rooms/rom_battle6/rom_battle6.yy",},"order":5,},
+    {"id":{"name":"scr_transition","path":"scripts/scr_transition/scr_transition.yy",},"order":8,},
     {"id":{"name":"rom_battle7","path":"rooms/rom_battle7/rom_battle7.yy",},"order":6,},
     {"id":{"name":"rom_battle8","path":"rooms/rom_battle8/rom_battle8.yy",},"order":7,},
     {"id":{"name":"rom_battle9","path":"rooms/rom_battle9/rom_battle9.yy",},"order":8,},

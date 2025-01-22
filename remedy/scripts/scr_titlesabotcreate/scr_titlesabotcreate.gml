@@ -1,3 +1,11 @@
+enum TITLESABOT_TIER {
+	MAIN,
+	OPTIONS,
+	FILE,
+	DIFFICULTY,
+	JOYPAD,
+}
+
 function scr_titlesabotcreate() {
 	//5 or 7
 	global.gmv=7;
