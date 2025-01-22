@@ -97,8 +97,7 @@ function scr_battleyoustep() {
 	if (!ignoreall){
 	    attackcyc+=1;
 	    if (attackcyc>=attackcycmax){
-	        if (global.sound)
-	            sound_play(snd_fire);
+	        sfx_play(snd_fire);
 	        attackcyc=0;
 	        for (i=0;i<global.multi;i+=1){
 	            tempid=instance_create(x,y,obj_shot);
@@ -117,8 +116,7 @@ function scr_battleyoustep() {
 	//throw flask
 	if (pressinteract && !pressinteractprev && !ignoreall){
 	    if (instance_number(obj_flask)==0 && flasks>0){
-	        if (global.sound)
-	            sound_play(snd_throwflask);
+	        sfx_play(snd_throwflask);
 	        flasks-=1;
 	        tempid=instance_create(x,y,obj_flask);
 	        tempid.direction=walkdir*90;
@@ -130,12 +128,9 @@ function scr_battleyoustep() {
 	    damaged-=1;
 	//failure
 	if (hp<=0 && !obj_battlesabot.failure){
-	    if (global.sound)
-	        sound_play(snd_bossexplo);
-	    if (global.sound)
-	        sound_play(snd_failure);
-	    repeat(20)
-	        sound_stop(snd_hype);
+	    sfx_play(snd_bossexplo);
+	    sfx_play(snd_failure);
+	    sound_stop(snd_hype);
 	    hp=0;
 	    if (global.battle==50)
 	        scr_stopmusic();

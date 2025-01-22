@@ -12,8 +12,7 @@ function scr_textbubblestep() {
 	if (marry && !obj_you.quit){
 	    if ((pressleft && !pressleftprev) || (pressright && !pressrightprev)){
 	        selected=1-selected;
-	        if (global.sound)
-	            sound_play(snd_select);
+	        sfx_play(snd_select);
 	        }
 	    }
 
@@ -33,16 +32,14 @@ function scr_textbubblestep() {
 	        if (selected==0){
 	            instance_destroy();
 	            obj_you.resetignoreall=2;
-	            if (global.sound)
-	                sound_play(snd_back);
+	            sfx_play(snd_back);
 	            }
 	        else{
 	            if (global.autosave)
 	                scr_save();
 	            global.roomgoto=rom_end;
 	            obj_sabot.transition=2;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            instance_destroy();
 	            }
 	        }
@@ -52,8 +49,7 @@ function scr_textbubblestep() {
 	            instance_destroy();
 	            //enter battle!
 	            if (cured==0){
-	                if (global.sound)
-	                    sound_play(snd_enterbattle);
+	                sfx_play(snd_enterbattle);
 	                global.exitedbattle=1;
 	                global.playerposx=obj_you.x;
 	                global.playerposy=obj_you.y;

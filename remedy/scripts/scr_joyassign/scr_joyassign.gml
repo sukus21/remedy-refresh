@@ -12,31 +12,27 @@ function scr_joyassign() {
 	if (temp==1){
 	    if (assign==0){
 	        global.joyup=tempbutton;
-	        if (global.sound)
-	            sound_play(snd_select);
+	        sfx_play(snd_select);
 	        assign=1;
 	        }
 	    else if (assign==1){
 	        if (global.joyup!=tempbutton){
 	            global.joydown=tempbutton;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            assign=2;
 	            }
 	        }
 	    else if (assign==2){
 	        if (global.joyup!=tempbutton && global.joydown!=tempbutton){
 	            global.joyleft=tempbutton;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            assign=3;
 	            }
 	        }
 	    else if (assign==3){
 	        if (global.joyup!=tempbutton && global.joydown!=tempbutton && global.joyleft!=tempbutton){
 	            global.joyright=tempbutton;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            assign=4;
 	            }
 	        }

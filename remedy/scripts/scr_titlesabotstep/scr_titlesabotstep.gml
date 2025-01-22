@@ -7,27 +7,23 @@ function scr_titlesabotstep() {
 	    if (tier==4){
 	        tier=1;
 	        selected=8;
-	        if (global.sound)
-	            sound_play(snd_back);
+	        sfx_play(snd_back);
 	        }
 	    else if (tier==3){
 	        tier=2;
 	        selected=prevselected;
-	        if (global.sound)
-	            sound_play(snd_back);
+	        sfx_play(snd_back);
 	        }
 	    else if (tier==2){
 	        tier=0;
 	        selected=loadgame;
-	        if (global.sound)
-	            sound_play(snd_back);
+	        sfx_play(snd_back);
 	        }
 	    else if (tier==1){
 	        tier=0;
 	        selected=2;
 	        scr_saveoptions();
-	        if (global.sound)
-	            sound_play(snd_back);
+	        sfx_play(snd_back);
 	        }
 	    else{
 	        scr_saveoptions();
@@ -43,8 +39,7 @@ function scr_titlesabotstep() {
 	        really+=1;
 	        if (!unlockreally && really==150){
 	            unlockreally=1;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        }
 	    else
@@ -53,8 +48,8 @@ function scr_titlesabotstep() {
 	    if (pressdown && !pressdownprev){
 	        if (tier!=4)
 	            selected+=1;
-	        if (global.sound && tier!=4)
-	            sound_play(snd_select);
+	        if (tier!=4)
+	            sfx_play(snd_select);
 	        if (tier==0){
 	            if (selected==4)
 	                selected=0;
@@ -81,8 +76,8 @@ function scr_titlesabotstep() {
 	    else if (pressup && !pressupprev){
 	        if (tier!=4)
 	            selected-=1;
-	        if (global.sound && tier!=4)
-	            sound_play(snd_select);
+	        if (tier!=4)
+	            sfx_play(snd_select);
 	        if (tier==0){
 	            if (selected==-1)
 	                selected=3;
@@ -174,14 +169,12 @@ function scr_titlesabotstep() {
 	                    else
 	                        filestring+="File3#"
 	                    }
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==2){
 	                tier=1;
 	                selected=0;
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==3){
 	                sound_stop_all();
@@ -193,8 +186,7 @@ function scr_titlesabotstep() {
 	            if (selected==0){
 	                tier=0;
 	                selected=2;
-	                if (global.sound)
-	                    sound_play(snd_back);
+	                sfx_play(snd_back);
 	                scr_saveoptions();
 	                }
 	            else if (selected==1){
@@ -202,8 +194,7 @@ function scr_titlesabotstep() {
 	                    scr_fullscreen(1,0);
 	                else
 	                    scr_fullscreen(1,1);
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==2){
 	                global.windowed+=1;
@@ -211,8 +202,7 @@ function scr_titlesabotstep() {
 	                    global.windowed=1;
 	                if (scr_fullscreen(0,0)==0)
 	                    scr_scalewindow();
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==3){
 	                global.playmusic=1-global.playmusic;
@@ -220,28 +210,23 @@ function scr_titlesabotstep() {
 	                    scr_stopmusic();
 	                else                    
 	                    sound_loop(global.music[1]);
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==4){
 	                global.sound=1-global.sound;
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==5){
 	                global.autosave=1-global.autosave;
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==6){
 	                global.alwaysrun=1-global.alwaysrun;
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==7){
 	                global.fliprun=1-global.fliprun;
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==8){
 	                tier=4;
@@ -252,8 +237,7 @@ function scr_titlesabotstep() {
 	                global.joyleft=99;
 	                global.joyright=99;
 	                selected=0;
-	                if (global.sound)
-	                    sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            }
 	        //new/load game
@@ -264,8 +248,7 @@ function scr_titlesabotstep() {
 	                    selected=0;
 	                else
 	                    selected=1;
-	                if (global.sound)
-	                    sound_play(snd_back);
+	                sfx_play(snd_back);
 	                }
 	            else if (selected>=1){
 	                if (!loadgame){
@@ -278,8 +261,7 @@ function scr_titlesabotstep() {
 	                    prevselected=selected;
 	                    selected=1;
 	                    tier=3;
-	                    if (global.sound)
-	                        sound_play(snd_select);
+	                    sfx_play(snd_select);
 	                    }
 	                else{
 	                    if (selected==1)
@@ -291,12 +273,10 @@ function scr_titlesabotstep() {
 	                    if (file_exists(global.savefilename)){
 	                        state=1;
 	                        scr_stopmusic();
-	                        if (global.sound)
-	                            sound_play(snd_select);
+	                        sfx_play(snd_select);
 	                        }
 	                    else{
-	                        if (global.sound)
-	                            sound_play(snd_back);
+	                        sfx_play(snd_back);
 	                        }
 	                    }
 	                }
@@ -306,36 +286,31 @@ function scr_titlesabotstep() {
 	            if (selected==0){
 	                tier=2;
 	                selected=prevselected;
-	                if (global.sound)
-	                    sound_play(snd_back);
+	                sfx_play(snd_back);
 	                }
 	            else if (selected==1){
 	                state=1;
 	                global.difficulty=0;
 	                scr_stopmusic();
-	                if (global.sound)
-	                   sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==2){
 	                state=1;
 	                global.difficulty=1;
 	                scr_stopmusic();
-	                if (global.sound)
-	                   sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==3){
 	                state=1;
 	                global.difficulty=2;
 	                scr_stopmusic();
-	                if (global.sound)
-	                   sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            else if (selected==4){
 	                state=1;
 	                global.difficulty=3;
 	                scr_stopmusic();
-	                if (global.sound)
-	                   sound_play(snd_select);
+	                sfx_play(snd_select);
 	                }
 	            }
 	        //joystick assign
@@ -344,12 +319,10 @@ function scr_titlesabotstep() {
 	                tier=1;
 	                selected=8;
 	                if (assign==4){
-	                    if (global.sound)
-	                        sound_play(snd_select);
+	                    sfx_play(snd_select);
 	                    }
 	                else{
-	                    if (global.sound)
-	                        sound_play(snd_back);
+	                    sfx_play(snd_back);
 	                    global.joyup=99;
 	                    global.joydown=99;
 	                    global.joyleft=99;
@@ -367,8 +340,7 @@ function scr_titlesabotstep() {
 	                global.windowed=8;
 	            if (scr_fullscreen(0,0)==0)
 	                scr_scalewindow();
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        else if (pressright && !pressrightprev){
 	            global.windowed+=1;
@@ -376,8 +348,7 @@ function scr_titlesabotstep() {
 	                global.windowed=1;
 	            if (scr_fullscreen(0,0)==0)
 	                scr_scalewindow();
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        }
     

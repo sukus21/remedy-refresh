@@ -13,8 +13,7 @@ if (z<=0){
         tempid.direction=45+i*90;
         }
     instance_create(x,y,obj_flaskexplo);
-    if (global.sound)
-        sound_play(snd_flaskexplo);
+    sfx_play(snd_flaskexplo);
     }
 imgcyc+=1;
 if (imgcyc==2){

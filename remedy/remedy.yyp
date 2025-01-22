@@ -124,6 +124,7 @@
     {"id":{"name":"scr_drawtext","path":"scripts/scr_drawtext/scr_drawtext.yy",},"order":1,},
     {"id":{"name":"scr_linebreak","path":"scripts/scr_linebreak/scr_linebreak.yy",},"order":2,},
     {"id":{"name":"scr_findlength","path":"scripts/scr_findlength/scr_findlength.yy",},"order":3,},
+    {"id":{"name":"scr_audio","path":"scripts/scr_audio/scr_audio.yy",},"order":7,},
     {"id":{"name":"scr_textbubblestep","path":"scripts/scr_textbubblestep/scr_textbubblestep.yy",},"order":4,},
     {"id":{"name":"scr_textbubbledraw","path":"scripts/scr_textbubbledraw/scr_textbubbledraw.yy",},"order":5,},
     {"id":{"name":"scr_singlebubble","path":"scripts/scr_singlebubble/scr_singlebubble.yy",},"order":6,},

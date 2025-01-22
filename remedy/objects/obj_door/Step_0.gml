@@ -4,8 +4,7 @@ if (obj_you.walkcyc<=2 && instance_number(obj_pause)==0 && obj_you.quit==0){
         if (wait==0){
             wait=40;
             if (global.item[tag]==1){
-                if (global.sound)
-                    sound_play(snd_flaskexplo);
+                sfx_play(snd_flaskexplo);
                 instance_destroy();
                 instance_create(x+8,y+8,obj_explo);
                 global.flashr=150;
@@ -15,8 +14,7 @@ if (obj_you.walkcyc<=2 && instance_number(obj_pause)==0 && obj_you.quit==0){
                 }
             else{
                 shake=18;
-                if (global.sound)
-                    sound_play(snd_back);
+                sfx_play(snd_back);
                 }
             }
         }

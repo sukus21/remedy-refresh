@@ -8,7 +8,6 @@ if (damaged==0 && hp>0){
     global.flashr=200;
     global.flashg=0;
     global.flashb=0;
-    if (global.sound)
-        sound_play(snd_hurt);
+    sfx_play(snd_hurt);
     }
 

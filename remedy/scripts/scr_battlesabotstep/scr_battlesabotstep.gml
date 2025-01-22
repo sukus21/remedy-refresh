@@ -170,8 +170,7 @@ function scr_battlesabotstep() {
 	        sndvol=0.7;
 	        }
 	    if (hype==300){
-	        if (global.sound)
-	            sound_loop(snd_hype);
+	        sfx_play(snd_hype, true);
 	        for (i=0;i<9;i+=1){
 	            tempid=instance_create(320+(i mod 2)*32,i*16,obj_enemy);
 	            tempid.type=17;
@@ -310,8 +309,7 @@ function scr_battlesabotstep() {
 	//victory
 	if (introcyc>=60 && global.difficulty!=3 && instance_number(obj_enemy)==0 && instance_number(obj_bossenemy)==0 && !victory && !failure){
 	    victory=1;
-	    if (global.sound)
-	        sound_play(snd_victory);
+	    sfx_play(snd_victory);
 	    if (obj_battleyou.hp<=0)
 	        obj_battleyou.hp=1;
 	    with (obj_enemyshot){

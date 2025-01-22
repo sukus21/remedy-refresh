@@ -10,8 +10,7 @@ function scr_deadbossstep() {
 	            global.shakescreen=4;
 	            }
 	        if (cyc mod 6==0){
-	            if (global.sound)
-	                sound_play(snd_explo);
+	            sfx_play(snd_explo);
 	            }
 	        if (cyc mod 24==0){
 	            global.flashr=150;
@@ -30,8 +29,7 @@ function scr_deadbossstep() {
 	            }
 	        }
 	    if (cyc==150){
-	        if (global.sound)
-	            sound_play(snd_bossexplo);
+	        sfx_play(snd_bossexplo);
 	        global.flashr=250;
 	        global.flashg=250;
 	        global.flashb=250;

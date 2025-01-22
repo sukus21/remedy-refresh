@@ -11,8 +11,7 @@ function scr_youinteract(argument0, argument1) {
 	if (tempid>-1 && !foundsomething){
 	    foundsomething=1;
 	    ignoreall=1;
-	    if (global.sound)
-	        sound_play(snd_explo);
+	    sfx_play(snd_explo);
 	    bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
 	    bubble.talktonpc=1;
 	    bubble.battle=tempid.battle;
@@ -62,8 +61,7 @@ function scr_youinteract(argument0, argument1) {
 	if (tempid>-1 && !foundsomething){
 	    foundsomething=1;
 	    ignoreall=1;
-	    if (global.sound)
-	        sound_play(snd_openchest);
+	    sfx_play(snd_openchest);
 	    //give item
 	    if (tempid.contents==0){
 	        global.hearts+=1;
@@ -178,8 +176,7 @@ function scr_youinteract(argument0, argument1) {
 	    if (global.maymarry==1){
 	        foundsomething=1;
 	        ignoreall=1;
-	        if (global.sound)
-	            sound_play(snd_explo);
+	        sfx_play(snd_explo);
 	        bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
 	        bubble.texts=tempid.texts;
 	        bubble.aftertexts=tempid.aftertexts;
@@ -202,8 +199,7 @@ function scr_youinteract(argument0, argument1) {
 	    else{
 	        foundsomething=1;
 	        scr_singlebubble("#$$$It's empty.","",0,0);
-	        if (global.sound)
-	            sound_play(snd_explo);
+	        sfx_play(snd_explo);
 	        }
 	    }
 
@@ -216,8 +212,7 @@ function scr_youinteract(argument0, argument1) {
 	        scr_singlebubble("#64 NPCs,66 endings#6000 lines of code#Endboss HP: 2688","Secret orb",1,0);
 	    else if (tempid.type==1)
 	        scr_singlebubble("#Hold Right on the difficulty select screen for 5 sec.","Forgotten orb",1,0);
-	    if (global.sound)
-	        sound_play(snd_explo);
+	    sfx_play(snd_explo);
 	    }
 	//Find superchest
 	tempid=-1;
@@ -226,8 +221,7 @@ function scr_youinteract(argument0, argument1) {
 	    if (global.maymarry==1){
 	        foundsomething=1;
 	        ignoreall=1;
-	        if (global.sound)
-	            sound_play(snd_explo);
+	        sfx_play(snd_explo);
 	        bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
 	        bubble.texts=tempid.texts;
 	        bubble.aftertexts=tempid.aftertexts;
@@ -256,8 +250,7 @@ function scr_youinteract(argument0, argument1) {
 	            }
 	        if (nochests){
 	            ignoreall=1;
-	            if (global.sound)
-	                sound_play(snd_openchest);
+	            sfx_play(snd_openchest);
 	            global.force+=1;
 	            if (global.force==2)
 	                bubbletext="$You got < Pill!##$$$$Shot power#$$$$increased.";
@@ -285,8 +278,7 @@ function scr_youinteract(argument0, argument1) {
 	            }
 	        else{
 	            scr_singlebubble("#You have opened others before me.","Jealous chest",1,0);
-	            if (global.sound)
-	                sound_play(snd_explo);
+	            sfx_play(snd_explo);
 	            }
 	        }
 	    }
@@ -295,8 +287,7 @@ function scr_youinteract(argument0, argument1) {
 	if (!foundsomething){
 	    foundsomething=1;
 	    ignoreall=1;
-	    if (global.sound)
-	        sound_play(snd_openchest);
+	    sfx_play(snd_openchest);
 	    instance_create(scr_xview(),scr_yview(),obj_pause);
 	    }
 

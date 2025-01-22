@@ -16,43 +16,37 @@ function scr_youstep() {
 	        //move marker
 	        if ((pressleft && !pressleftprev) || (pressright && !pressrightprev)){
 	            quitselect=1-quitselect;
-	            if (global.sound)
-	                sound_play(snd_select);
+	            sfx_play(snd_select);
 	            }
 	        //advance
 	        if (pressinteract && !pressinteractprev){
 	            if (quit==1){
 	                if (quitselect==0){
 	                    quit=2;
-	                    if (global.sound)
-	                        sound_play(snd_back);
+	                    sfx_play(snd_back);
 	                    }
 	                else{
 	                    quit=2;
 	                    scr_save();
-	                    if (global.sound)
-	                        sound_play(snd_warp);
+	                    sfx_play(snd_warp);
 	                    }
 	                }
 	            else if (quit==2){
 	                if (quitselect==0){
 	                    quitignoreall=0;
 	                    quit=0;
-	                    if (global.sound)
-	                        sound_play(snd_back);
+	                    sfx_play(snd_back);
 	                    }
 	                else{
 	                    if (global.autosave){
 	                        scr_save();
-	                        if (global.sound)
-	                            sound_play(snd_warp);
+	                        sfx_play(snd_warp);
 	                        }
 	                    quitignoreall=1;
 	                    ignoreall=1;
 	                    obj_sabot.transition=2;
 	                    obj_sabot.quitgame=1;
-	                    if (global.sound)
-	                        sound_play(snd_select);
+	                    sfx_play(snd_select);
 	                    }
 	                }
 	            }
@@ -83,8 +77,7 @@ function scr_youstep() {
 	            if (global.flasks>99)
 	                global.flasks=99;
 	            ignoreall=1;
-	            if (global.sound)
-	                sound_play(snd_openchest);
+	            sfx_play(snd_openchest);
 	            global.flashr=200;
 	            global.flashg=200;
 	            global.flashb=200;
@@ -149,8 +142,7 @@ function scr_youstep() {
 	        if (quit>0){
 	            quitignoreall=0;
 	            quit=0;
-	            if (global.sound)
-	                sound_play(snd_back);
+	            sfx_play(snd_back);
 	            }
 	        //enter quit menu
 	        else if (obj_sabot.transition==0 && obj_sabot.extratransition==0){
@@ -159,21 +151,18 @@ function scr_youstep() {
 	                with (obj_pause){
 	                    if (quitprompt){
 	                        quitprompt=0;
-	                        if (global.sound)
-	                            sound_play(snd_back);
+	                        sfx_play(snd_back);
 	                        }
 	                    else if (tier==0){
 	                        obj_you.resetignoreall=2;
 	                        instance_destroy();
-	                        if (global.sound)
-	                            sound_play(snd_back);
+	                        sfx_play(snd_back);
 	                        }
 	                    else if (tier==1){
 	                        scr_saveoptions();
 	                        tier=0;
 	                        global.pauseselected=5;
-	                        if (global.sound)
-	                            sound_play(snd_back);
+	                        sfx_play(snd_back);
 	                        }
 	                    }
 	                }
@@ -185,8 +174,7 @@ function scr_youstep() {
 	                else
 	                    quit=1;
 	                quitselect=0;
-	                if (global.sound)
-	                    sound_play(snd_openchest);
+	                sfx_play(snd_openchest);
 	                }
 	            }
 	        }

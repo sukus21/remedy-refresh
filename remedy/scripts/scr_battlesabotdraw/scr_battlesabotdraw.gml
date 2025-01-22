@@ -14,8 +14,7 @@ function scr_battlesabotdraw() {
 	        drawbanner+=1;
 	    if (introcyc mod 15==0 && introcyc<50){
 	        global.flashr=180;
-	        if (global.sound)
-	            sound_play(snd_healmode);
+	        sfx_play(snd_healmode);
 	        if (global.gmv==5){
 	            healmodeflash=4;
 	            healmodeflashcyc=0;
