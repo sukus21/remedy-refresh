@@ -437,7 +437,7 @@ for object in objects:
         # Find position of event list
         pos = propfile.find(r'"eventList": [')
         pos = propfile.find("\n", pos)
-        propfile = propfile[:pos] + r'{"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,}' + propfile[pos:]
+        propfile = propfile[:pos] + "\n    " + r'{"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},' + propfile[pos:]
 
         # Add create event to file
         yyfile = open(path + "/" + object.name + ".yy", "w")
