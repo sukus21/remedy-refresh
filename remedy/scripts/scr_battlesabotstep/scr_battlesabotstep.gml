@@ -384,11 +384,6 @@ function scr_battlesabotstep() {
 	    global.flashg=250;
 	if (global.flashb>=250)
 	    global.flashb=250;
-	if (global.gmv==5){
-	    global.flashr=0;
-	    global.flashg=0;
-	    global.flashb=0;
-	    }
 	global.bgcolor=make_color_rgb(global.flashr,global.flashg,global.flashb);
 	__background_set_colour( global.bgcolor );
 

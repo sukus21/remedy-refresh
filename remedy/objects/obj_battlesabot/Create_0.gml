@@ -14,7 +14,6 @@ transitioncyc = 0;
 introcyc = 0;
 drawbanner = 0;
 healmodeflash = 0;
-healmodeflashcyc = 0;
 i = 0;
 ready = 0;
 type = 0;

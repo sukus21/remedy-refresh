@@ -32,7 +32,6 @@ global.mobile_run = false;
 global.__jstick_povangle = 0;
 global.flashr = 0;
 global.sound = 0;
-global.gmv = 0;
 global.flashg = 0;
 global.hearts = 0;
 global.camefrom = 0;

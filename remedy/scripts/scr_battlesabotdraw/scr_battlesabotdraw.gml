@@ -15,27 +15,10 @@ function scr_battlesabotdraw() {
 	    if (introcyc mod 15==0 && introcyc<50){
 	        global.flashr=180;
 	        sfx_play(snd_healmode);
-	        if (global.gmv==5){
-	            healmodeflash=4;
-	            healmodeflashcyc=0;
-	            }
-	        }
-	    if (global.gmv==5){
-	        if (healmodeflash>0){
-	            healmodeflashcyc+=1;
-	            if (healmodeflashcyc==2){
-	                healmodeflashcyc=0;
-	                if (healmodeflash>0)
-	                    healmodeflash-=1;
-	                }
-	            }
 	        }
 	    if (introcyc<40){
 	        for (i=0;i<drawbanner;i+=1){
-	            if (global.gmv==5)
-	                draw_sprite(spr_message1,11,get_xview()+0+i*16,get_yview()+52);
-	            else
-	                scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
+	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
 	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
 	            draw_sprite(spr_message1,i+healmodeflash*12,get_xview()+0+i*16,get_yview()+52);
 	            }
@@ -44,10 +27,7 @@ function scr_battlesabotdraw() {
 	        drawbanner-=1;
 	    if (introcyc>=40 && introcyc<60){
 	        for (i=10-drawbanner;i<10;i+=1){
-	            if (global.gmv==5)
-	                draw_sprite(spr_message1,11,get_xview()+0+i*16,get_yview()+52);
-	            else
-	                scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
+	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
 	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
 	            draw_sprite(spr_message1,i+healmodeflash*12,get_xview()+0+i*16,get_yview()+52);
 	            }
@@ -86,22 +66,15 @@ function scr_battlesabotdraw() {
 	    if (victorycyc<1000)
 	        victorycyc+=1;
 	    if (victorycyc>=15){
-	        if (global.gmv==7)
-	            scr_drawext(spr_rewardline,1,0,get_xview()+24,get_yview()+72);
+	        scr_drawext(spr_rewardline,1,0,get_xview()+24,get_yview()+72);
 	        //draw_sprite_ext(spr_rewardline,0,get_xview()+24,get_yview()+72,1,1,0,global.bgcolor,1);
-	        if (global.gmv==5)
-	            scr_drawtext(get_xview()+32,get_yview()+80,"YOU GOT A >!",8,spr_text2);
-	        else
-	            scr_drawtext(get_xview()+32,get_yview()+80,"YOU GOT A >!",8,spr_text);
+	        scr_drawtext(get_xview()+32,get_yview()+80,"YOU GOT A >!",8,spr_text);
 	        }
 	    if (victorycyc>=15 && victorycyc<=25)
 	        drawvictory+=1;
 	    if (victorycyc>=0){
 	        for (i=0;i<drawvictory;i+=1){
-	            if (global.gmv==5)
-	                draw_sprite(spr_message1,11,get_xview()+0+i*16,get_yview()+52);
-	            else
-	                scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
+	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
 	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
 	            draw_sprite(spr_message2,i,get_xview()+0+i*16,get_yview()+52);
 	            }

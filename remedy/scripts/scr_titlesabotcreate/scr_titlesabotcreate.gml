@@ -7,9 +7,6 @@ enum TITLESABOT_TIER {
 }
 
 function scr_titlesabotcreate() {
-	//5 or 7
-	global.gmv=7;
-
 	if (!global.titleinit){
 	    global.titleinit=1;;
 	    global.fullscreen=1;

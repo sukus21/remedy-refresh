@@ -384,13 +384,6 @@ function scr_sabotstep() {
 	    viewy=room_height-get_hview();
 	set_xview(viewx);
 	set_yview(viewy);
-
-	//GM5 background color
-	if (global.gmv==5){
-	    global.flashr=lowestr;
-	    global.flashg=lowestg;
-	    global.flashb=lowestb;
-	}
 	
 	//Background color
 	global.flashr-=global.flashspeed;
