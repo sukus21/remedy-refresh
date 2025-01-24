@@ -16,11 +16,11 @@ if (imgcyc==2){
 image_single=img+phase*4+homing*8+spiral*12;
 
 if (outside){
-    if (x<scr_xview()-16 || x>scr_xview()+scr_wview()+16 || y<scr_yview()-16 || y>scr_yview()+scr_hview()+4)
+    if (x<get_xview()-16 || x>get_xview()+get_wview()+16 || y<get_yview()-16 || y>get_yview()+get_hview()+4)
         instance_destroy();
     }
 else{
-    if (x<scr_xview() || x>scr_xview()+scr_wview() || y<scr_yview() || y>scr_yview()+scr_hview()-12)
+    if (x<get_xview() || x>get_xview()+get_wview() || y<get_yview() || y>get_yview()+get_hview()-12)
         instance_destroy();
     }
 

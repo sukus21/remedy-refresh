@@ -13,18 +13,18 @@ function scr_sabotdraw() {
 	if (obj_you.quit==1 || obj_you.quit==2){
 	    for(i=0;i<10;i+=1){
 	        for(j=0;j<9;j+=1)
-	            draw_sprite(spr_black,0,scr_xview()+i*16,scr_yview()+j*16);
+	            draw_sprite(spr_black,0,get_xview()+i*16,get_yview()+j*16);
 	        }
 	    if (obj_you.quit==1)
-	        scr_drawtext(scr_xview()+16,scr_yview()+scr_hview()/2-20,"$$$$$Save?##$$$$No$$$Yes",8,spr_text);
+	        scr_drawtext(get_xview()+16,get_yview()+get_hview()/2-20,"$$$$$Save?##$$$$No$$$Yes",8,spr_text);
 	    else if (obj_you.quit==2){
 	        if (global.autosave)
-	            scr_drawtext(scr_xview()+16,scr_yview()+scr_hview()/2-20,"$Save and Quit?##$$$$No$$$Yes",8,spr_text);
+	            scr_drawtext(get_xview()+16,get_yview()+get_hview()/2-20,"$Save and Quit?##$$$$No$$$Yes",8,spr_text);
 	        else
-	            scr_drawtext(scr_xview()+16,scr_yview()+scr_hview()/2-20,"$$$Quit game?##$$$$No$$$Yes",8,spr_text);
+	            scr_drawtext(get_xview()+16,get_yview()+get_hview()/2-20,"$$$Quit game?##$$$$No$$$Yes",8,spr_text);
 	        }
-	    //scr_drawtext(scr_xview()+32,scr_yview()+scr_hview()/2-20,"$$$Quit?##$$No$$$Yes",8,spr_text);
-	    draw_sprite(spr_text,96,scr_xview()+40+obj_you.quitselect*40,scr_yview()+scr_hview()/2-4);
+	    //scr_drawtext(get_xview()+32,get_yview()+get_hview()/2-20,"$$$Quit?##$$No$$$Yes",8,spr_text);
+	    draw_sprite(spr_text,96,get_xview()+40+obj_you.quitselect*40,get_yview()+get_hview()/2-4);
 	    }
 
 	//Transition in
@@ -38,12 +38,12 @@ function scr_sabotdraw() {
 	        for (i=0;i<5-transitioncyc2;i+=1){
 	            for (j=0;j<9;j+=1){
 	                if (i==5-transitioncyc2-1){
-	                    draw_sprite(spr_black,2,scr_xview()+i*16,scr_yview()+j*16);
-	                    draw_sprite(spr_black,3,scr_xview()+144-i*16,scr_yview()+j*16);
+	                    draw_sprite(spr_black,2,get_xview()+i*16,get_yview()+j*16);
+	                    draw_sprite(spr_black,3,get_xview()+144-i*16,get_yview()+j*16);
 	                    }
 	                else{
-	                    draw_sprite(spr_black,0,scr_xview()+i*16,scr_yview()+j*16);
-	                    draw_sprite(spr_black,0,scr_xview()+144-i*16,scr_yview()+j*16);
+	                    draw_sprite(spr_black,0,get_xview()+i*16,get_yview()+j*16);
+	                    draw_sprite(spr_black,0,get_xview()+144-i*16,get_yview()+j*16);
 	                    }
 	                }
 	            }
@@ -95,12 +95,12 @@ function scr_sabotdraw() {
 	        for (i=0;i<transitioncyc2;i+=1){
 	            for (j=0;j<9;j+=1){
 	                if (i==transitioncyc2-1){
-	                    draw_sprite(spr_black,2,scr_xview()+i*16,scr_yview()+j*16);
-	                    draw_sprite(spr_black,3,scr_xview()+144-i*16,scr_yview()+j*16);
+	                    draw_sprite(spr_black,2,get_xview()+i*16,get_yview()+j*16);
+	                    draw_sprite(spr_black,3,get_xview()+144-i*16,get_yview()+j*16);
 	                    }
 	                else{
-	                    draw_sprite(spr_black,0,scr_xview()+i*16,scr_yview()+j*16);
-	                    draw_sprite(spr_black,0,scr_xview()+144-i*16,scr_yview()+j*16);
+	                    draw_sprite(spr_black,0,get_xview()+i*16,get_yview()+j*16);
+	                    draw_sprite(spr_black,0,get_xview()+144-i*16,get_yview()+j*16);
 	                    }
 	                }
 	            }
@@ -184,11 +184,11 @@ function scr_sabotdraw() {
 	        hidelocmessage=1;
 	    }
 	if (!hidelocmessage && locmescyc>=3){
-	    scr_drawext(spr_locationmessage,2,1,scr_xview(),scr_yview());
-	    //draw_sprite_ext(spr_locationmessage,1,scr_xview(),scr_yview(),1,1,0,global.bgcolor,1);
-	    draw_sprite(spr_locationmessage,0,scr_xview(),scr_yview());
-	    xoff=(scr_wview()/2)-string_length(loctext)*4;
-	    scr_drawtext(scr_xview()+xoff,scr_yview()+3,loctext,8,spr_text);
+	    scr_drawext(spr_locationmessage,2,1,get_xview(),get_yview());
+	    //draw_sprite_ext(spr_locationmessage,1,get_xview(),get_yview(),1,1,0,global.bgcolor,1);
+	    draw_sprite(spr_locationmessage,0,get_xview(),get_yview());
+	    xoff=(get_wview()/2)-string_length(loctext)*4;
+	    scr_drawtext(get_xview()+xoff,get_yview()+3,loctext,8,spr_text);
 	    }
 
 	//DEBUG: show hitboxes

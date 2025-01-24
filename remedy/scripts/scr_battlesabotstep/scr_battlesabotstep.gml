@@ -342,22 +342,22 @@ function scr_battlesabotstep() {
 	if (global.shakescreen>0){
 	    global.shakescreen-=1;
 	    if (global.shakescreen mod 2==0)
-	        scr_setyview(bossoff+global.shakescreen);
+	        set_yview(bossoff+global.shakescreen);
 	    else
-	       scr_setyview(bossoff);
+	       set_yview(bossoff);
 	    }
 	else
-	    scr_setyview(bossoff);
+	    set_yview(bossoff);
 
 	if (horishake){
 	    horishakecyc+=1;
 	    if (horishakecyc mod 4<=1)
-	        scr_setxview(2);
+	        set_xview(2);
 	    else
-	        scr_setxview(0);
+	        set_xview(0);
 	    }
 	else
-	    scr_setxview(0);
+	    set_xview(0);
 
 	//Global animation cycler
 	global.animcyc+=1;

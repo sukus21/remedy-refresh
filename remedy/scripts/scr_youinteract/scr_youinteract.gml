@@ -12,7 +12,7 @@ function scr_youinteract(argument0, argument1) {
 	    foundsomething=1;
 	    ignoreall=1;
 	    sfx_play(snd_explo);
-	    bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
+	    bubble=instance_create_depth(get_xview(),get_yview(),-100,obj_textbubble);
 	    bubble.talktonpc=1;
 	    bubble.battle=tempid.battle;
 	    bubble.cured=tempid.cured;
@@ -27,8 +27,8 @@ function scr_youinteract(argument0, argument1) {
 	        bubble.aftertext[i]=tempid.aftertext[i];
 	    bubble.name=tempid.name;
 	    //Correct y
-	    if (obj_you.y<scr_yview()+(scr_hview()/2)-16)
-	        bubble.y=scr_yview()+scr_hview()-40;
+	    if (obj_you.y<get_yview()+(get_hview()/2)-16)
+	        bubble.y=get_yview()+get_hview()-40;
 	    //grab first text
 	    with (bubble){
 	        if (cured==0)
@@ -177,7 +177,7 @@ function scr_youinteract(argument0, argument1) {
 	        foundsomething=1;
 	        ignoreall=1;
 	        sfx_play(snd_explo);
-	        bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
+	        bubble=instance_create_depth(get_xview(),get_yview(),-100,obj_textbubble);
 	        bubble.texts=tempid.texts;
 	        bubble.aftertexts=tempid.aftertexts;
 	        bubble.marry=1;
@@ -185,8 +185,8 @@ function scr_youinteract(argument0, argument1) {
 	        bubble.aftertext[0]="";
 	        bubble.name="an empty chest";
 	        //Correct y
-	        if (obj_you.y<scr_yview()+(scr_hview()/2)-16)
-	            bubble.y=scr_yview()+scr_hview()-40;
+	        if (obj_you.y<get_yview()+(get_hview()/2)-16)
+	            bubble.y=get_yview()+get_hview()-40;
 	        //grab first text
 	        with (bubble){
 	            marry=1;
@@ -222,7 +222,7 @@ function scr_youinteract(argument0, argument1) {
 	        foundsomething=1;
 	        ignoreall=1;
 	        sfx_play(snd_explo);
-	        bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
+	        bubble=instance_create_depth(get_xview(),get_yview(),-100,obj_textbubble);
 	        bubble.texts=tempid.texts;
 	        bubble.aftertexts=tempid.aftertexts;
 	        bubble.marry=1;
@@ -230,8 +230,8 @@ function scr_youinteract(argument0, argument1) {
 	        bubble.aftertext[0]="";
 	        bubble.name="Jealous chest";
 	        //Correct y
-	        if (obj_you.y<scr_yview()+(scr_hview()/2)-16)
-	            bubble.y=scr_yview()+scr_hview()-40;
+	        if (obj_you.y<get_yview()+(get_hview()/2)-16)
+	            bubble.y=get_yview()+get_hview()-40;
 	        //grab first text
 	        with (bubble){
 	            marry=1;
@@ -288,7 +288,7 @@ function scr_youinteract(argument0, argument1) {
 	    foundsomething=1;
 	    ignoreall=1;
 	    sfx_play(snd_openchest);
-	    instance_create_depth(scr_xview(),scr_yview(),-100,obj_pause);
+	    instance_create_depth(get_xview(),get_yview(),-100,obj_pause);
 	    }
 
 

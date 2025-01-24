@@ -17,22 +17,22 @@ String not found: ConversionLog_ConvertedString 356 "\ Regen#How quickly you reg
 Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_battlesabotstep\scr_battlesabotstep.gml
 Converted builtin - line 397: background_color=global.bgcolor -> __background_set_colour( global.bgcolor )
 
-Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_xview\scr_xview.gml
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\get_xview\get_xview.gml
 Converted builtin - line 4: view_xview[0] -> __view_get( e__VW.XView, 0 )
 
-Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_yview\scr_yview.gml
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\get_yview\get_yview.gml
 Converted builtin - line 4: view_yview[0] -> __view_get( e__VW.YView, 0 )
 
-Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_wview\scr_wview.gml
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\get_wview\get_wview.gml
 Converted builtin - line 4: view_wview[0] -> __view_get( e__VW.WView, 0 )
 
-Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_hview\scr_hview.gml
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\get_hview\get_hview.gml
 Converted builtin - line 4: view_hview[0] -> __view_get( e__VW.HView, 0 )
 
-Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_setxview\scr_setxview.gml
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\set_xview\set_xview.gml
 Converted builtin - line 4: view_xview[0]=argument0 -> __view_set( e__VW.XView, 0, argument0 )
 
-Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\scr_setyview\scr_setyview.gml
+Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\scripts\set_yview\set_yview.gml
 Converted builtin - line 4: view_yview[0]=argument0 -> __view_set( e__VW.YView, 0, argument0 )
 
 Converting GML script: C:\OneDrive\GameMaker\01 Projekter\23-11-26 Remedy Mobile\remedy\conv\gmx\remedy_4919A5F5\objects\obj_breaksabot\Draw_0.gml

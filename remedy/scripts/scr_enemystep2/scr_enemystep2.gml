@@ -81,25 +81,25 @@ function scr_enemystep2() {
 	                }
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==2){
-	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==3){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                    }
 	                else
 	                    go=1;
@@ -147,25 +147,25 @@ function scr_enemystep2() {
 	            repeat(10){ //good enough
 	                if (!go){
 	                    if (dir==0){
-	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16)
+	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==1){
-	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16)
+	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==2){
-	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16)
+	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==3){
-	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28)
+	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
@@ -243,25 +243,25 @@ function scr_enemystep2() {
 	            cyc=0;
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16)
+	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16)
 	                    dir=3;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16)
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16)
 	                    dir=0;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==2){
-	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16)
+	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16)
 	                    dir=1;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==3){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28)
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28)
 	                    dir=2;
 	                else
 	                    go=1;
@@ -317,25 +317,25 @@ function scr_enemystep2() {
 	                    dir=3;
 	                go=0;
 	                if (dir==0){
-	                    if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                    if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==1){
-	                    if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                    if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==2){
-	                    if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                    if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==3){
-	                    if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                    if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                        }
 	                    else
 	                        go=1;
@@ -395,7 +395,7 @@ function scr_enemystep2() {
 	            repeat(10){ //good enough
 	                if (!go){
 	                    if (dir==0){
-	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                            if (point_distance(x,y,obj_battleyou.x,obj_battleyou.y)>=48)
 	                                dir=floor(random(4));
 	                            }
@@ -403,7 +403,7 @@ function scr_enemystep2() {
 	                            go=1;
 	                        }
 	                    else if (dir==1){
-	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                            if (point_distance(x,y,obj_battleyou.x,obj_battleyou.y)>=48)
 	                                dir=floor(random(4));
 	                            }
@@ -411,7 +411,7 @@ function scr_enemystep2() {
 	                            go=1;
 	                        }
 	                    else if (dir==2){
-	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                            if (point_distance(x,y,obj_battleyou.x,obj_battleyou.y)>=48)
 	                                dir=floor(random(4));
 	                            }
@@ -419,7 +419,7 @@ function scr_enemystep2() {
 	                            go=1;
 	                        }
 	                    else if (dir==3){
-	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                            if (point_distance(x,y,obj_battleyou.x,obj_battleyou.y)>=48)
 	                                dir=floor(random(4));
 	                            }
@@ -469,25 +469,25 @@ function scr_enemystep2() {
 	            repeat(10){ //good enough
 	                if (!go){
 	                    if (dir==0){
-	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16)
+	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==1){
-	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16)
+	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==2){
-	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16)
+	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==3){
-	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28)
+	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
@@ -535,13 +535,13 @@ function scr_enemystep2() {
 	            cyc=0;
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16)
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16)
 	                    dir=1;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28)
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28)
 	                    dir=0;
 	                else
 	                    go=1;
@@ -592,25 +592,25 @@ function scr_enemystep2() {
 	                    dir=3;
 	                go=0;
 	                if (dir==0){
-	                    if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                    if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==1){
-	                    if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                    if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==2){
-	                    if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                    if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==3){
-	                    if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                    if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                        }
 	                    else
 	                        go=1;
@@ -669,25 +669,25 @@ function scr_enemystep2() {
 	                }
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==2){
-	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==3){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                    }
 	                else
 	                    go=1;
@@ -738,25 +738,25 @@ function scr_enemystep2() {
 	                dir=floor(random(4));
 	                go=0;
 	                if (dir==0){
-	                    if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                    if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==1){
-	                    if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                    if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==2){
-	                    if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                    if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                        }
 	                    else
 	                        go=1;
 	                    }
 	                else if (dir==3){
-	                    if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                    if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                        }
 	                    else
 	                        go=1;
@@ -808,25 +808,25 @@ function scr_enemystep2() {
 	            repeat(10){ //good enough
 	                if (!go){
 	                    if (dir==0){
-	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16)
+	                        if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==1){
-	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16)
+	                        if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==2){
-	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16)
+	                        if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
 	                        }
 	                    else if (dir==3){
-	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28)
+	                        if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28)
 	                            dir=floor(random(4));
 	                        else
 	                            go=1;
@@ -871,25 +871,25 @@ function scr_enemystep2() {
 	            cyc=0;
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16)
+	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16)
 	                    dir=3;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16)
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16)
 	                    dir=0;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==2){
-	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16)
+	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16)
 	                    dir=1;
 	                else
 	                    go=1;
 	                }
 	            else if (dir==3){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28)
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28)
 	                    dir=2;
 	                else
 	                    go=1;
@@ -941,25 +941,25 @@ function scr_enemystep2() {
 	                dir=3;
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==2){
-	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==3){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                    }
 	                else
 	                    go=1;
@@ -1040,25 +1040,25 @@ function scr_enemystep2() {
 	                }
 	            go=0;
 	            if (dir==0){
-	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>scr_xview()+scr_wview()-16){
+	                if (!place_free(x+16,y) || place_meeting(x+16,y,obj_enemy) || place_meeting(x+16,y,obj_holder) || x>get_xview()+get_wview()-16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==1){
-	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<scr_yview()+16){
+	                if (!place_free(x,y-16) || place_meeting(x,y-16,obj_enemy) || place_meeting(x,y-16,obj_holder) || y<get_yview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==2){
-	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<scr_xview()+16){
+	                if (!place_free(x-16,y) || place_meeting(x-16,y,obj_enemy) || place_meeting(x-16,y,obj_holder) || x<get_xview()+16){
 	                    }
 	                else
 	                    go=1;
 	                }
 	            else if (dir==3){
-	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>scr_yview()+scr_hview()-28){
+	                if (!place_free(x,y+16) || place_meeting(x,y+16,obj_enemy) || place_meeting(x,y+16,obj_holder) || y>get_yview()+get_hview()-28){
 	                    }
 	                else
 	                    go=1;

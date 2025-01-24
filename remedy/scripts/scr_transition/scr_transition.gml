@@ -2,12 +2,12 @@ function transition_draw(_cycle) {
 	for (var i = 0; i < _cycle; i++) {
 	    for (var j = 0; j < 9; j++) {
 	        if (i == _cycle-1) {
-	            draw_sprite(spr_black, 2, scr_xview()+i*16, scr_yview()+j*16);
-	            draw_sprite(spr_black, 3, scr_xview()+144-i*16, scr_yview()+j*16);
+	            draw_sprite(spr_black, 2, get_xview()+i*16, get_yview()+j*16);
+	            draw_sprite(spr_black, 3, get_xview()+144-i*16, get_yview()+j*16);
 	        }
 	        else {
-	            draw_sprite(spr_black, 0, scr_xview()+i*16, scr_yview()+j*16);
-	            draw_sprite(spr_black, 0, scr_xview()+144-i*16, scr_yview()+j*16);
+	            draw_sprite(spr_black, 0, get_xview()+i*16, get_yview()+j*16);
+	            draw_sprite(spr_black, 0, get_xview()+144-i*16, get_yview()+j*16);
 	        }
 	    }
 	}

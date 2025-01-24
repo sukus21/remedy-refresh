@@ -4,16 +4,16 @@ function scr_battleyouendstep() {
 	    x=8;
 	    hspeed=0;
 	    }
-	if (y<scr_yview()+8){
-	    y=scr_yview()+8;
+	if (y<get_yview()+8){
+	    y=get_yview()+8;
 	    vspeed=0;
 	    }
 	if (x>room_width-8){
 	    x=room_width-8;
 	    hspeed=0;
 	    }
-	if (y>scr_yview()+scr_hview()-20){
-	    y=scr_yview()+scr_hview()-20;
+	if (y>get_yview()+get_hview()-20){
+	    y=get_yview()+get_hview()-20;
 	    vspeed=0;
 	    }
 	//Limits in boss

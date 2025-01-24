@@ -383,18 +383,18 @@ function scr_sabotstep() {
 	    }
 
 	//Camera
-	viewx=obj_you.x-scr_wview()/2;
-	viewy=obj_you.y-scr_hview()/2;
+	viewx=obj_you.x-get_wview()/2;
+	viewy=obj_you.y-get_hview()/2;
 	if (viewx<0)
 	    viewx=0;
 	if (viewy<0)
 	    viewy=0;
-	if (viewx>room_width-scr_wview())
-	    viewx=room_width-scr_wview();
-	if (viewy>room_height-scr_hview())
-	    viewy=room_height-scr_hview();
-	scr_setxview(viewx);
-	scr_setyview(viewy);
+	if (viewx>room_width-get_wview())
+	    viewx=room_width-get_wview();
+	if (viewy>room_height-get_hview())
+	    viewy=room_height-get_hview();
+	set_xview(viewx);
+	set_yview(viewy);
 
 	//GM5 background color
 	if (global.gmv==5){
