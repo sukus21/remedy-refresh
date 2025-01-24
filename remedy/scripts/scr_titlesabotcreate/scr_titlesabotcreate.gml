@@ -27,8 +27,6 @@ function scr_titlesabotcreate() {
 	    scr_loadoptions();
 	    scr_saveoptions();
 	    scr_scalewindow();
-	    global.musicmissing=0;
-	    scr_soundadd();
 	    if (joystick_exists(1)){
 	        global.joystickexists=1;
 	        global.haspov=joystick_has_pov();
@@ -59,8 +57,7 @@ function scr_titlesabotcreate() {
 	    selected=0;
 	    }
 
-	if (global.playmusic)
-	    sound_loop(global.music[1]);
+	music_play(snd_song2);
     
 
 

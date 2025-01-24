@@ -173,7 +173,7 @@ function scr_enemystep() {
 	    else if (type==4){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -237,7 +237,7 @@ function scr_enemystep() {
 	    else if (type==6){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -367,7 +367,7 @@ function scr_enemystep() {
 	    else if (type==8){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -432,7 +432,7 @@ function scr_enemystep() {
 	    else if (type==9){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -476,7 +476,7 @@ function scr_enemystep() {
 	        if (fire>=8){
 	            fire=0;
 	            if (hpprev>hp){
-					sound_stop(snd_enemyshot);
+					audio_stop_sound(snd_enemyshot);
 					sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	                tempid.force=type;
@@ -560,7 +560,7 @@ function scr_enemystep() {
 	    else if (type==12){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -576,7 +576,7 @@ function scr_enemystep() {
 	    else if (type==13){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -642,7 +642,7 @@ function scr_enemystep() {
 	    else if (type==14){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -703,7 +703,7 @@ function scr_enemystep() {
 	    else if (type==15){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -773,7 +773,7 @@ function scr_enemystep() {
 	    else if (type==16){
 	        if (fire>=96){
 	            fire=0;
-	            sound_stop(snd_enemyshot);
+	            audio_stop_sound(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
 	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
@@ -850,7 +850,7 @@ function scr_enemystep() {
 	//explode
 	//oh my!
 	if (hp<=0){
-	    sound_stop(snd_explo);
+	    audio_stop_sound(snd_explo);
 	    sfx_play(snd_explo);
 	    instance_destroy();
 	    instance_create_depth(x,y,-20,obj_explo);

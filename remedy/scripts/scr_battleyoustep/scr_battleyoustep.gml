@@ -130,7 +130,7 @@ function scr_battleyoustep() {
 	if (hp<=0 && !obj_battlesabot.failure){
 	    sfx_play(snd_bossexplo);
 	    sfx_play(snd_failure);
-	    sound_stop(snd_hype);
+	    audio_stop_sound(snd_hype);
 	    hp=0;
 	    if (global.battle==50)
 	        scr_stopmusic();

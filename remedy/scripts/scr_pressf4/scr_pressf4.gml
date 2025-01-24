@@ -1,7 +1,7 @@
 function scr_pressf4() {
 	if (keyboard_check(vk_alt)){
 	    scr_saveoptions();
-	    sound_stop_all();
+		audio_stop_all();
 	    game_end();
 	    }
 	else{

@@ -77,13 +77,6 @@ function scr_titlesabotdraw() {
 	        scr_drawtext(16, 88, _text, 8, spr_text2);
 	        draw_sprite(spr_text, 96, 8, 88+selected*8);
 	    }
-
-	    // Music missing message
-	    if (global.musicmissing && (tier == TITLESABOT_TIER.MAIN || tier == TITLESABOT_TIER.FILE || tier == TITLESABOT_TIER.DIFFICULTY)) {
-	        for (var i = 0; i < 10; i++) draw_sprite(spr_black, 0, i*8, 132);
-	        scr_drawtext(0, 132, "                    ", 8, spr_text2);
-	        scr_drawtext(0, 132, "Music files missing!", 8, spr_text3);
-	    }
 	}
 
 	// Transition out

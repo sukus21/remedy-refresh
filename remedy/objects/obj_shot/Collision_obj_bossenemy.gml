@@ -5,7 +5,7 @@ if (other.active){
     instance_create_depth(round(x),round(y),-10,obj_puff);
     other.hp-=global.force;
     other.damaged=1;
-    sound_stop(snd_hitenemy)
+    audio_stop_sound(snd_hitenemy)
     sfx_play(snd_hitenemy);
     }
 

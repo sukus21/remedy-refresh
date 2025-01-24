@@ -9,7 +9,7 @@ if (damage>=global.boxhp){
         }
     if (global.shakescreen==0)
         global.shakescreen=3;
-    sound_stop(snd_explo);
+    audio_stop_sound(snd_explo);
     sfx_play(snd_explo);
     }
 

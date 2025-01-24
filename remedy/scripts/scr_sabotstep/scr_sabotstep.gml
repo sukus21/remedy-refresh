@@ -116,8 +116,7 @@ function scr_sabotstep() {
 	    if (global.fromsavefile){
 	        if (room==rom_warproom){
 	            global.world=2;
-	            if (global.playmusic)
-	                sound_loop(global.music[2]);
+	            music_play(snd_song3);
 	            }
 	        }
 	    }
@@ -296,12 +295,10 @@ function scr_sabotstep() {
 	    if (global.exitedbattle==1 && room==rom_royalcastle2f){
 	        scr_stopmusic();
 	        if (global.finalbossdead>0){
-	            if (global.playmusic)
-	                sound_loop(global.music[4]);
+	            music_play(snd_song5);
 	            }
 	        else{
-	            if (global.playmusic)
-	                sound_loop(global.music[9]);
+	            music_play(snd_song7);
 	            }
 	        }
 	    if (global.exitedbattle)
@@ -326,38 +323,30 @@ function scr_sabotstep() {
 	    if (global.world!=global.lastworld){
 	        scr_stopmusic();
 	        if (global.world==1){
-	            if (global.playmusic)
-	                sound_loop(global.music[4]);
+	            music_play(snd_song5);
 	            }
 	        else if (global.world==2){
-	            if (global.playmusic)
-	                sound_loop(global.music[2]);
+	            music_play(snd_song3);
 	            }
 	        else if (global.world==3){
-	            if (global.playmusic)
-	                sound_loop(global.music[5]);
+	            music_play(snd_song6);
 	            }
 	        else if (global.world==4){
-	            if (global.playmusic)
-	                sound_loop(global.music[0]);
+	            music_play(snd_song1);
 	            }
 	        else if (global.world==5){
-	            if (global.playmusic)
-	                sound_loop(global.music[3]);
+	            music_play(snd_song4);
 	            }
 	        else if (global.world==6){
 	            if (global.finalbossdead>0){
-	                if (global.playmusic)
-	                    sound_loop(global.music[4]);
+	                music_play(snd_song5);
 	                }
 	            else{
-	                if (global.playmusic)
-	                    sound_loop(global.music[9]);
+	                music_play(snd_song7);
 	                }
 	            }
 	        else if (global.world==7){
-	            if (global.playmusic)
-	                sound_loop(global.music[9]);
+	            music_play(snd_song7);
 	            }
 	        }
 	    global.lastworld=global.world;

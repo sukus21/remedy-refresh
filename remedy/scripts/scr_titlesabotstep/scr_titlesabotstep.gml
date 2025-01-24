@@ -36,7 +36,7 @@ function scr_titlesabotstep() {
 		// Back out of game (quit)
 	    else {
 	        scr_saveoptions();
-	        sound_stop_all();
+	        audio_stop_all();
 	        game_end();
 	    }
 	}
@@ -58,7 +58,7 @@ function scr_titlesabotstep() {
 		var _moved = (pressdown and !pressdownprev) - (pressup and !pressupprev);
 	    if (_moved != 0) {
 	        if (tier != TITLESABOT_TIER.JOYPAD) selected += _moved;
-	        if (global.sound && tier != TITLESABOT_TIER.JOYPAD) sound_play(snd_select);
+	        if (tier != TITLESABOT_TIER.JOYPAD) sfx_play(snd_select);
 			
 			var _step_max = 0;
 			switch(tier) {
@@ -110,7 +110,7 @@ function scr_titlesabotstep() {
 				
 				// Quit
 	            else if (selected == 3) {
-	                sound_stop_all();
+	                audio_stop_all();
 	                game_end();
 	            }
 	        }
@@ -159,7 +159,7 @@ function scr_titlesabotstep() {
 	            else if (selected == 3) {
 	                global.playmusic = !global.playmusic;
 	                if (!global.playmusic) scr_stopmusic();
-	                else sound_loop(global.music[1]);
+	                else music_play(snd_song2);
 	                sfx_play(snd_select);
 	            }
 				

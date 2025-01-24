@@ -99,7 +99,7 @@ function scr_endsabotdraw() {
 	        transitioncyc=0;
 	        transitioncyc2=0;
 	        //restart
-	        sound_stop_all();
+	        audio_stop_all();
 	        room_goto(rom_title);
 	        }
 	    }

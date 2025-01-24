@@ -52,7 +52,7 @@ function scr_pausestep() {
 	                    quitignoreall=1;
 	                    if (global.autosave){
 	                        scr_save();
-	                        sound_stop(snd_warp);
+	                        audio_stop_sound(snd_warp);
 	                        sfx_play(snd_warp);
 	                        }
 	                    obj_you.quitignoreall=1;
@@ -101,20 +101,20 @@ function scr_pausestep() {
 	                scr_stopmusic();
 	            else{
 	                if (global.world==1)
-	                    sound_loop(global.music[4]);
+	                    music_play(snd_song5);
 	                else if (global.world==2)
-	                    sound_loop(global.music[2]);
+	                    music_play(snd_song3);
 	                else if (global.world==3)
-	                    sound_loop(global.music[5]);
+	                    music_play(snd_song6);
 	                else if (global.world==4)
-	                    sound_loop(global.music[0]);
+	                    music_play(snd_song1);
 	                else if (global.world==5)
-	                    sound_loop(global.music[3]);
+	                    music_play(snd_song4);
 	                else if (global.world==6){
 	                    if (global.finalbossdead)
-	                        sound_loop(global.music[4]);
+	                        music_play(snd_song5);
 	                    else
-	                        sound_loop(global.music[9]);
+	                        music_play(snd_song7);
 	                    }
 	                }
 	            sfx_play(snd_select);

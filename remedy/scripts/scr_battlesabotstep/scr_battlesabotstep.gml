@@ -16,8 +16,7 @@ function scr_battlesabotstep() {
 	    smacklength=0;
 	    if (global.battle==50){
 	        scr_stopmusic();
-	        if (global.playmusic)
-	            sound_loop(global.music[7]);
+	        music_play(snd_boss1);
         
 	        bossoff=420;
 	        tempid=instance_create_depth(96,532,5,obj_bossenemy);
@@ -166,7 +165,7 @@ function scr_battlesabotstep() {
 	    hype+=1;
 	    //here it comes!
 	    if (hype==290){
-	        sound_volume(snd_hype,0);
+	        audio_sound_gain(snd_hype, 0, 0);
 	        sndvol=0.7;
 	        }
 	    if (hype==300){
@@ -181,7 +180,7 @@ function scr_battlesabotstep() {
 	    if (hype>=300 && hype<=1000){
 	        obj_battleyou.x-=4;
 	        sndvol+=0.005;
-	        sound_volume(snd_hype,sndvol);
+	        audio_sound_gain(snd_hype, sndvol, 0);
 	        }
 	    }
 
@@ -236,8 +235,7 @@ function scr_battlesabotstep() {
 	        if (advancecyc==1)
 	            scr_stopmusic();
 	        if (advancecyc==30){
-	            if (global.playmusic)
-	                sound_loop(global.music[8]);
+	            music_play(snd_boss2);
 	            horishake=1;
 	            }
 	        if (advancecyc>=30 && advancecyc<310){

@@ -50,7 +50,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==8)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=100+firecyc2*5;
@@ -62,7 +62,7 @@ function scr_bossenemystep() {
 	        else if (type==2){
 	            if (firecyc==30){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -84,7 +84,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==8)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=180+firecyc2*5;
@@ -96,7 +96,7 @@ function scr_bossenemystep() {
 	        else if (type==4){
 	            if (firecyc==90){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -107,7 +107,7 @@ function scr_bossenemystep() {
 	        else if (type==5){
 	            if (firecyc==30){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                sfx_play(snd_explo);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -128,7 +128,7 @@ function scr_bossenemystep() {
 	        else if (type==6){
 	            if (firecyc==30){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -144,7 +144,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==5)
 	                    firecyc2=-4;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y)+firecyc2*5;
@@ -159,7 +159,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==2)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                for (i=0;i<8;i+=1){
 	                    tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -172,7 +172,7 @@ function scr_bossenemystep() {
 	        else if (type==9){
 	            if (firecyc==80){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                sfx_play(snd_explo);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -190,7 +190,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==5)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(8+firecyc2*8,-8,-5,obj_enemyshot);
 	                tempid.direction=270;
@@ -208,7 +208,7 @@ function scr_bossenemystep() {
 	                firecyc3=0;
 	                if (global.shakescreen==0)
 	                    global.shakescreen=4;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                sfx_play(snd_explo);
 	                for (i=0;i<5;i+=1){
@@ -226,7 +226,7 @@ function scr_bossenemystep() {
 	            firecyc4+=1;
 	            if (firecyc4==120){
 	                firecyc4=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -246,7 +246,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==8)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                for (i=-1;i<2;i+=1){
 	                    tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -260,7 +260,7 @@ function scr_bossenemystep() {
 	        else if (type==2){
 	            if (firecyc==30){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -274,7 +274,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==8)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                for (i=-1;i<2;i+=1){
 	                    tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -288,7 +288,7 @@ function scr_bossenemystep() {
 	        else if (type==4){
 	            if (firecyc==45){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -299,7 +299,7 @@ function scr_bossenemystep() {
 	        else if (type==5){
 	            if (firecyc==30){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                sfx_play(snd_explo);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -320,7 +320,7 @@ function scr_bossenemystep() {
 	        else if (type==6){
 	            if (firecyc==30){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                for (i=-1;i<2;i+=1){
 	                    tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -339,7 +339,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==5)
 	                    firecyc2=-4;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y)+firecyc2*5;
@@ -352,7 +352,7 @@ function scr_bossenemystep() {
 	                firecyc4+=1;
 	                if (firecyc4==8)
 	                    firecyc4=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=100+firecyc4*5;
@@ -369,7 +369,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==2)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                for (i=0;i<8;i+=1){
 	                    tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -382,7 +382,7 @@ function scr_bossenemystep() {
 	        else if (type==9){
 	            if (firecyc==40){
 	                firecyc=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                sfx_play(snd_explo);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
@@ -406,7 +406,7 @@ function scr_bossenemystep() {
 	                firecyc2+=1;
 	                if (firecyc2==5)
 	                    firecyc2=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(8+firecyc2*8,-8,-5,obj_enemyshot);
 	                tempid.direction=270;
@@ -424,7 +424,7 @@ function scr_bossenemystep() {
 	                firecyc3=0;
 	                if (global.shakescreen==0)
 	                    global.shakescreen=4;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                sfx_play(snd_explo);
 	                for (i=0;i<5;i+=1){
@@ -442,7 +442,7 @@ function scr_bossenemystep() {
 	            firecyc4+=1;
 	            if (firecyc4==128){
 	                firecyc4=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
 	                tempid.direction=point_direction(x+firefromx,y+firefromy,obj_battleyou.x,obj_battleyou.y);
@@ -456,7 +456,7 @@ function scr_bossenemystep() {
 	                firecyc6+=1;
 	                if (firecyc6==8)
 	                    firecyc6=0;
-	                sound_stop(snd_enemyshot);
+	                audio_stop_sound(snd_enemyshot);
 	                sfx_play(snd_enemyshot);
 	                for (i=-2;i<2;i+=1){
 	                    tempid=instance_create_depth(x+firefromx,y+firefromy,-5,obj_enemyshot);
