@@ -84,7 +84,7 @@ function scr_youstep() {
 	            //open chest
 	            with (tempid){
 	                instance_destroy();
-	                instance_create(x,y,obj_openchest);
+	                instance_create_depth(x,y,50,obj_openchest);
 	                }            
 	            scr_singlebubble("All chests in East and West Hurtland have been opened!#$>12 <1 @2 \\4 &4","",0,1);
 	            }

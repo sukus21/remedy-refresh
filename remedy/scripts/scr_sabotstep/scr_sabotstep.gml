@@ -162,7 +162,7 @@ function scr_sabotstep() {
 	    with (obj_chest){
 	        if (global.chestopened[tag] || global.difficulty==3){
 	            instance_destroy();
-	            instance_create(x,y,obj_openchest);
+	            instance_create_depth(x,y,50,obj_openchest);
 	            }
 	        }
 	    //Remove roadblocks

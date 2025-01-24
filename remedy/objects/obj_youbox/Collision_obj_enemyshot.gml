@@ -11,6 +11,6 @@ if (obj_battleyou.damaged==0 && obj_battleyou.hp>0){
     }
 with (other){
     instance_destroy();
-    instance_create(x,y,obj_puff);
+    instance_create_depth(x,y,-10,obj_puff);
     }
 

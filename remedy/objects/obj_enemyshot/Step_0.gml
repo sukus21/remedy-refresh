@@ -2,7 +2,7 @@ if (ttl>0){
     ttl-=1;
     if (ttl==0){
         instance_destroy();
-        instance_create(x,y,obj_puff);
+        instance_create_depth(x,y,-10,obj_puff);
         }
     }
 
@@ -43,7 +43,7 @@ if (!phase && !homing && !spiral){
         x+=hspeed;
         y+=vspeed;
         instance_destroy();
-        instance_create(round(x),round(y),obj_puff);
+        instance_create_depth(round(x),round(y),-10,obj_puff);
         tempid.damage+=1;
         }
     }

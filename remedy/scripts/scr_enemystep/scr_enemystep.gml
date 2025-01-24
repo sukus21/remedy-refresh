@@ -88,13 +88,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -147,13 +147,13 @@ function scr_enemystep() {
 	                    }
 	                if (go){
 	                    if (dir==0)
-	                        instance_create(x+16-8,y-8,obj_holder);
+	                        instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                    else if (dir==1)
-	                        instance_create(x-8,y-16-8,obj_holder);
+	                        instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                    else if (dir==2)
-	                        instance_create(x-16-8,y-8,obj_holder);
+	                        instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                    else if (dir==3)
-	                        instance_create(x-8,y+16-8,obj_holder);
+	                        instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                    }
 	                }
 	            }
@@ -175,7 +175,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.direction=point_direction(x,y,obj_battleyou.x,obj_battleyou.y);
 	            }
@@ -212,13 +212,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -239,7 +239,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.direction=point_direction(x,y,obj_battleyou.x,obj_battleyou.y);
 	            }
@@ -284,13 +284,13 @@ function scr_enemystep() {
 	                    }
 	                if (go){
 	                    if (dir==0)
-	                        instance_create(x+16-8,y-8,obj_holder);
+	                        instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                    else if (dir==1)
-	                        instance_create(x-8,y-16-8,obj_holder);
+	                        instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                    else if (dir==2)
-	                        instance_create(x-16-8,y-8,obj_holder);
+	                        instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                    else if (dir==3)
-	                        instance_create(x-8,y+16-8,obj_holder);
+	                        instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                    }
 	                }
 	            }
@@ -342,13 +342,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -369,7 +369,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.direction=dir*90;
 	            }
@@ -407,13 +407,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -434,7 +434,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            if (x>obj_battleyou.x)
 	                tempid.direction=180;
@@ -458,9 +458,9 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -478,7 +478,7 @@ function scr_enemystep() {
 	            if (hpprev>hp){
 					sound_stop(snd_enemyshot);
 					sfx_play(snd_enemyshot);
-	                tempid=instance_create(x,y,obj_enemyshot);
+	                tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	                tempid.force=type;
 	                tempid.direction=point_direction(x,y,obj_battleyou.x,obj_battleyou.y);
 	                }
@@ -535,13 +535,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -562,7 +562,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.phase=1;
 	            tempid.direction=180;
@@ -578,7 +578,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.phase=1;
 	            tempid.direction=dir*90;
@@ -617,13 +617,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -644,7 +644,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.phase=1;
 	            tempid.direction=point_direction(x,y,obj_battleyou.x,obj_battleyou.y);
@@ -678,13 +678,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -705,7 +705,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.phase=1;
 	            tempid.direction=point_direction(x,y,obj_battleyou.x,obj_battleyou.y);
@@ -748,13 +748,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -775,7 +775,7 @@ function scr_enemystep() {
 	            fire=0;
 	            sound_stop(snd_enemyshot);
 	            sfx_play(snd_enemyshot);
-	            tempid=instance_create(x,y,obj_enemyshot);
+	            tempid=instance_create_depth(x,y,-5,obj_enemyshot);
 	            tempid.force=type;
 	            tempid.phase=1;
 	            tempid.direction=point_direction(x,y,obj_battleyou.x,obj_battleyou.y);
@@ -824,13 +824,13 @@ function scr_enemystep() {
 	                }
 	            if (go){
 	                if (dir==0)
-	                    instance_create(x+16-8,y-8,obj_holder);
+	                    instance_create_depth(x+16-8,y-8,0,obj_holder);
 	                else if (dir==1)
-	                    instance_create(x-8,y-16-8,obj_holder);
+	                    instance_create_depth(x-8,y-16-8,0,obj_holder);
 	                else if (dir==2)
-	                    instance_create(x-16-8,y-8,obj_holder);
+	                    instance_create_depth(x-16-8,y-8,0,obj_holder);
 	                else if (dir==3)
-	                    instance_create(x-8,y+16-8,obj_holder);
+	                    instance_create_depth(x-8,y+16-8,0,obj_holder);
 	                }
 	            }
 	        if (go){
@@ -853,9 +853,9 @@ function scr_enemystep() {
 	    sound_stop(snd_explo);
 	    sfx_play(snd_explo);
 	    instance_destroy();
-	    instance_create(x,y,obj_explo);
+	    instance_create_depth(x,y,-20,obj_explo);
 	    for (i=0;i<4;i+=1)
-	        (instance_create(x,y,obj_explopart)).direction=45+90*i;
+	        (instance_create_depth(x,y,-15,obj_explopart)).direction=45+90*i;
 	    if (global.flashr==0){
 	        global.flashr=0;
 	        global.flashg=0;

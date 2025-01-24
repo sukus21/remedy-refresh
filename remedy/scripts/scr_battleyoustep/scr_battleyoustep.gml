@@ -100,7 +100,7 @@ function scr_battleyoustep() {
 	        sfx_play(snd_fire);
 	        attackcyc=0;
 	        for (i=0;i<global.multi;i+=1){
-	            tempid=instance_create(x,y,obj_shot);
+	            tempid=instance_create_depth(x,y,-5,obj_shot);
 	            if (global.force>5)
 	                tempid.type=5;
 	            else
@@ -118,7 +118,7 @@ function scr_battleyoustep() {
 	    if (instance_number(obj_flask)==0 && flasks>0){
 	        sfx_play(snd_throwflask);
 	        flasks-=1;
-	        tempid=instance_create(x,y,obj_flask);
+	        tempid=instance_create_depth(x,y,-4,obj_flask);
 	        tempid.direction=walkdir*90;
 	        }
 	    }
@@ -146,15 +146,15 @@ function scr_battleyoustep() {
 	        }
 	    with (obj_enemyshot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    with (obj_shot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    with (obj_flask){
 	        instance_destroy();
-	        instance_create(x,y-z,obj_puff);
+	        instance_create_depth(x,y-z,-10,obj_puff);
 	        }
 	    obj_battlesabot.failure=1;
 	    ignoreall=1;
@@ -164,19 +164,19 @@ function scr_battleyoustep() {
 	    obj_battlesabot.dollys=-4;
 	    obj_battlesabot.dollyacc=0.5;
 	    for (i=0;i<8;i+=1){
-	        tempid=instance_create(x,y,obj_puff);
+	        tempid=instance_create_depth(x,y,-10,obj_puff);
 	        tempid.speed=6;
 	        tempid.direction=i*45;
 	        tempid.depth=obj_battlesabot.depth-10;
 	        tempid.slow=1;
-	        tempid=instance_create(x,y,obj_puff);
+	        tempid=instance_create_depth(x,y,-10,obj_puff);
 	        tempid.speed=12;
 	        tempid.direction=i*45+22.5;
 	        tempid.depth=obj_battlesabot.depth-10;
 	        tempid.slow=1;
 	        }
 	    for (i=0;i<32;i+=1){
-	        tempid=instance_create(x,y,obj_explopart);
+	        tempid=instance_create_depth(x,y,-15,obj_explopart);
 	        tempid.speed=16+(i mod 2)*8;
 	        tempid.direction=i*22.5;
 	        tempid.depth=obj_battlesabot.depth-5;

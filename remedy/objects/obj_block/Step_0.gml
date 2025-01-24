@@ -1,6 +1,6 @@
 if (damage>=global.boxhp){
-    instance_create(x,y,obj_cover);
-    instance_create(x+8,y+8,obj_explo);
+    instance_create_depth(x,y,1000,obj_cover);
+    instance_create_depth(x+8,y+8,-20,obj_explo);
     instance_destroy();
     if (global.flashr==0 && !obj_battlesabot.victory && !obj_battlesabot.failure){
         global.flashr=0;

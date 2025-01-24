@@ -6,7 +6,7 @@ function scr_deadbossstep() {
 	        if (cyc mod 2==0){
 	            myx=bbox_left+(bbox_right-bbox_left)/2;
 	            myy=bbox_top+(bbox_bottom-bbox_top)/2;
-	            instance_create(myx-16+floor(random(32)),myy-16+floor(random(32)),obj_explo);
+	            instance_create_depth(myx-16+floor(random(32)),myy-16+floor(random(32)),-20,obj_explo);
 	            global.shakescreen=4;
 	            }
 	        if (cyc mod 6==0){
@@ -37,7 +37,7 @@ function scr_deadbossstep() {
 	        myx=bbox_left+(bbox_right-bbox_left)/2;
 	        myy=bbox_top+(bbox_bottom-bbox_top)/2;
 	        for (i=0;i<32;i+=1){
-	            tempid=instance_create(myx,myy,obj_explopart);
+	            tempid=instance_create_depth(myx,myy,-15,obj_explopart);
 	            tempid.slow=1;
 	            tempid.speed=10+(i mod 2)*10;
 	            tempid.direction=i*11.25;

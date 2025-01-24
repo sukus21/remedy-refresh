@@ -20,7 +20,7 @@ function scr_battlesabotstep() {
 	            sound_loop(global.music[7]);
         
 	        bossoff=420;
-	        tempid=instance_create(96,532,obj_bossenemy);
+	        tempid=instance_create_depth(96,532,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss1;
 	        tempid.active=0;
 	        tempid.type=1;
@@ -28,7 +28,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=16;
 	        tempid.firefromy=12;
         
-	        tempid=instance_create(88,476,obj_bossenemy);
+	        tempid=instance_create_depth(88,476,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss2;
 	        tempid.active=0;
 	        tempid.type=2;
@@ -36,7 +36,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=16;
 	        tempid.firefromy=16;
         
-	        tempid=instance_create(96,428,obj_bossenemy);
+	        tempid=instance_create_depth(96,428,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss3;
 	        tempid.active=0;
 	        tempid.type=3;
@@ -44,7 +44,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=12;
 	        tempid.firefromy=12;
         
-	        tempid=instance_create(88,392,obj_bossenemy);
+	        tempid=instance_create_depth(88,392,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss4;
 	        tempid.active=0;
 	        tempid.type=4;
@@ -52,7 +52,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=8;
 	        tempid.firefromy=12;
         
-	        tempid=instance_create(96,320,obj_bossenemy);
+	        tempid=instance_create_depth(96,320,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss5;
 	        tempid.active=0;
 	        tempid.type=5;
@@ -60,7 +60,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=20;
 	        tempid.firefromy=25;
         
-	        tempid=instance_create(112,288,obj_bossenemy);
+	        tempid=instance_create_depth(112,288,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss6;
 	        tempid.active=0;
 	        tempid.type=6;
@@ -68,7 +68,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=12;
 	        tempid.firefromy=12;
         
-	        tempid=instance_create(112,204,obj_bossenemy);
+	        tempid=instance_create_depth(112,204,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss7;
 	        tempid.active=0;
 	        tempid.type=7;
@@ -76,7 +76,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=12;
 	        tempid.firefromy=32;
         
-	        tempid=instance_create(88,172,obj_bossenemy);
+	        tempid=instance_create_depth(88,172,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss8;
 	        tempid.active=0;
 	        tempid.type=8;
@@ -84,7 +84,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=8;
 	        tempid.firefromy=8;
         
-	        tempid=instance_create(112,140,obj_bossenemy);
+	        tempid=instance_create_depth(112,140,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss9;
 	        tempid.active=0;
 	        tempid.type=9;
@@ -92,7 +92,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=16;
 	        tempid.firefromy=12;
         
-	        tempid=instance_create(104,24,obj_bossenemy);
+	        tempid=instance_create_depth(104,24,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss10;
 	        tempid.active=0;
 	        tempid.type=10;
@@ -100,7 +100,7 @@ function scr_battlesabotstep() {
 	        tempid.firefromx=5;
 	        tempid.firefromy=5;
 
-	        tempid=instance_create(1024,1024,obj_bossenemy);
+	        tempid=instance_create_depth(1024,1024,5,obj_bossenemy);
 	        tempid.sprite_index=spr_boss10;
 	        tempid.active=0;
 	        tempid.type=11;
@@ -172,7 +172,7 @@ function scr_battlesabotstep() {
 	    if (hype==300){
 	        sfx_play(snd_hype, true);
 	        for (i=0;i<9;i+=1){
-	            tempid=instance_create(320+(i mod 2)*32,i*16,obj_enemy);
+	            tempid=instance_create_depth(320+(i mod 2)*32,i*16,5,obj_enemy);
 	            tempid.type=17;
 	            tempid.ready=1;
 	            tempid.mask_index=spr_enemymegabox;
@@ -196,7 +196,7 @@ function scr_battlesabotstep() {
 	    obj_battleyou.vspeed=0;
 	    with (obj_enemyshot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    }
 	else if (bossdead[4] && bossdead[5] && bossdead[6] && var_layer==1 && !advance && obj_battleyou.hp>0 && !failure){
@@ -209,7 +209,7 @@ function scr_battlesabotstep() {
 	    obj_battleyou.vspeed=0;
 	    with (obj_enemyshot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    }
 	else if (bossdead[7] && bossdead[8] && bossdead[9] && var_layer==2 && !advance && obj_battleyou.hp>0 && !failure){
@@ -222,7 +222,7 @@ function scr_battlesabotstep() {
 	    obj_battleyou.vspeed=0;
 	    with (obj_enemyshot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    }
 
@@ -314,15 +314,15 @@ function scr_battlesabotstep() {
 	        obj_battleyou.hp=1;
 	    with (obj_enemyshot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    with (obj_shot){
 	        instance_destroy();
-	        instance_create(x,y,obj_puff);
+	        instance_create_depth(x,y,-10,obj_puff);
 	        }
 	    with (obj_flask){
 	        instance_destroy();
-	        instance_create(x,y-z,obj_puff);
+	        instance_create_depth(x,y-z,-10,obj_puff);
 	        }
 	    global.shakescreen=8;
 	    global.npccured[global.battlenpc]=1;

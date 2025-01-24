@@ -259,7 +259,7 @@ function scr_endsabotstep() {
 	        temprandy = 8+floor(random(32));
 	        fireworkcolor = floor(random(5));
 	        for (i=0; i < 16; i += 1) {
-	            tempid = instance_create(temprandx,temprandy,obj_explopart);
+	            tempid = instance_create_depth(temprandx,temprandy,-15,obj_explopart);
 	            tempid.slow = 1;
 	            tempid.speed = 3+(i mod 2)*3;
 	            tempid.direction = i*22.5;

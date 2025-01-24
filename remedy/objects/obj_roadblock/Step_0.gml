@@ -6,8 +6,8 @@ if (obj_you.walkcyc<=2 && instance_number(obj_pause)==0 && obj_you.quit==0){
             if (global.hearts>=amount){
                 sfx_play(snd_flaskexplo);
                 instance_destroy();
-                instance_create(x+8,y+8,obj_explo);
-                instance_create(x+24,y+8,obj_explo);
+                instance_create_depth(x+8,y+8,-20,obj_explo);
+                instance_create_depth(x+24,y+8,-20,obj_explo);
                 global.flashr=150;
                 global.flashg=150;
                 global.flashb=150;

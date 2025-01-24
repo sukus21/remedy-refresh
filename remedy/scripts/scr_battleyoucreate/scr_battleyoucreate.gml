@@ -12,7 +12,7 @@ function scr_battleyoucreate() {
 	brake=0.4;
 	attackcyc=0;
 	attackcycmax=8;
-	mybox=instance_create(x,y,obj_youbox);
+	mybox=instance_create_depth(x,y,0,obj_youbox);
 	regencycmax=75-6*global.regen;
 
 

@@ -20,7 +20,7 @@ if (tempid>-1){
     x+=hspeed;
     y+=vspeed;
     instance_destroy();
-    instance_create(round(x),round(y),obj_puff);
+    instance_create_depth(round(x),round(y),-10,obj_puff);
     tempid.damage+=1;
     }
 
@@ -34,6 +34,6 @@ else if (x<scr_xview()+4 || x>scr_xview()+scr_wview()-4 || y<scr_yview()+4 || y>
     else if (y>scr_yview()+scr_hview()-16)
         y=scr_yview()+scr_hview()-16;
     instance_destroy();
-    instance_create(round(x),round(y),obj_puff);
+    instance_create_depth(round(x),round(y),-10,obj_puff);
     }
 

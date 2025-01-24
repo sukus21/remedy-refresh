@@ -5,7 +5,7 @@ function scr_singlebubble(argument0, argument1, argument2, argument3) {
 	//argument2 1 = use name
 	//argument3 1 = longer delay for pressing away bubble
 	ignoreall=1;
-	bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
+	bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
 	bubble.talktonpc=0;
 	bubble.texts=1;
 	bubble.text[0]=argument0;

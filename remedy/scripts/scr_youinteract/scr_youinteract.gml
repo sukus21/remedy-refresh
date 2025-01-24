@@ -12,7 +12,7 @@ function scr_youinteract(argument0, argument1) {
 	    foundsomething=1;
 	    ignoreall=1;
 	    sfx_play(snd_explo);
-	    bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
+	    bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
 	    bubble.talktonpc=1;
 	    bubble.battle=tempid.battle;
 	    bubble.cured=tempid.cured;
@@ -165,7 +165,7 @@ function scr_youinteract(argument0, argument1) {
 	    global.chestopened[tempid.tag]=1;
 	    with (tempid){
 	        instance_destroy();
-	        instance_create(x,y,obj_openchest);
+	        instance_create_depth(x,y,50,obj_openchest);
 	        }
 	    }
 
@@ -177,7 +177,7 @@ function scr_youinteract(argument0, argument1) {
 	        foundsomething=1;
 	        ignoreall=1;
 	        sfx_play(snd_explo);
-	        bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
+	        bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
 	        bubble.texts=tempid.texts;
 	        bubble.aftertexts=tempid.aftertexts;
 	        bubble.marry=1;
@@ -222,7 +222,7 @@ function scr_youinteract(argument0, argument1) {
 	        foundsomething=1;
 	        ignoreall=1;
 	        sfx_play(snd_explo);
-	        bubble=instance_create(scr_xview(),scr_yview(),obj_textbubble);
+	        bubble=instance_create_depth(scr_xview(),scr_yview(),-100,obj_textbubble);
 	        bubble.texts=tempid.texts;
 	        bubble.aftertexts=tempid.aftertexts;
 	        bubble.marry=1;
@@ -272,7 +272,7 @@ function scr_youinteract(argument0, argument1) {
 	            //open chest
 	            with (tempid){
 	                instance_destroy();
-	                instance_create(x,y,obj_openchest);
+	                instance_create_depth(x,y,50,obj_openchest);
 	                }
 	            global.hyperchest=1;
 	            }
@@ -288,7 +288,7 @@ function scr_youinteract(argument0, argument1) {
 	    foundsomething=1;
 	    ignoreall=1;
 	    sfx_play(snd_openchest);
-	    instance_create(scr_xview(),scr_yview(),obj_pause);
+	    instance_create_depth(scr_xview(),scr_yview(),-100,obj_pause);
 	    }
 
 
