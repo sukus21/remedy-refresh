@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "Android",
   "option_android_sync_amazon": false,
-  "option_android_display_name": "Princess Remedy In a World of Jurt",
+  "option_android_display_name": "Princess Remedy In a World of Hurt",
   "option_android_version": "1.0.0",
   "option_android_tools_from_version": false,
   "option_android_build_tools": "",
