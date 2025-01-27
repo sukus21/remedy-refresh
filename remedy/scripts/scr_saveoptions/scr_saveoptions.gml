@@ -1,7 +1,7 @@
 function scr_saveoptions() {
 	fileid = file_text_open_write("options.sav");
 
-	global.fullscreen = window_get_fullscreen();
+	global.fullscreen = fullscreen_get();
 	file_text_write_string(fileid, string(global.fullscreen + global.alwaysrun*2 + global.fliprun*4));
 	file_text_writeln(fileid);
 	file_text_write_string(fileid, string(global.windowed));

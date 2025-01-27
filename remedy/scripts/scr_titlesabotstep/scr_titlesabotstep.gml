@@ -120,7 +120,7 @@ function scr_titlesabotstep() {
 				if (!global.is_mobile) {
 					// Fullscreen
 		            if (selected == 1) {
-						scr_fullscreen(1, !window_get_fullscreen());
+						fullscreen_set(!fullscreen_get());
 		                sfx_play(snd_select);
 		            }
 				
@@ -129,7 +129,7 @@ function scr_titlesabotstep() {
 		                global.windowed++;
 		                if (global.windowed > 8) global.windowed = 1;
 					
-		                if (!window_get_fullscreen()) scr_scalewindow();
+		                if (!fullscreen_get()) scale_window();
 		                sfx_play(snd_select);
 		            }
 				}
@@ -276,7 +276,7 @@ function scr_titlesabotstep() {
 				if (selected == 2) {
 		            global.windowed += _slide;
 					global.windowed = option_advance(global.windowed, 8, 1);
-		            if (!window_get_fullscreen()) scr_scalewindow();
+		            if (!window_get_fullscreen()) scale_window();
 		            sfx_play(snd_select);
 		        }
 			}

@@ -12,7 +12,7 @@ function scr_titlesabotdraw() {
 			
 			if (!global.is_mobile) {
 				tiertext += "Fullscreen ";
-				tiertext += (window_get_fullscreen()) ? "ON#" : "OFF#";
+				tiertext += (fullscreen_get()) ? "ON#" : "OFF#";
 		        tiertext += "Windowed size ";
 				tiertext += "x" + string(global.windowed) + "#";
 			}

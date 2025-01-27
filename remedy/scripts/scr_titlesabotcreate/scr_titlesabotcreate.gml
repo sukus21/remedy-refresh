@@ -23,7 +23,7 @@ function scr_titlesabotcreate() {
 	    global.fliprun=0;
 	    scr_loadoptions();
 	    scr_saveoptions();
-	    scr_scalewindow();
+		scale_window();
 	    if (joystick_exists(1)){
 	        global.joystickexists=1;
 	        global.haspov=joystick_has_pov();

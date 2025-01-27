@@ -14,7 +14,7 @@ function scr_loadoptions() {
 	    global.fullscreen = temp;
 	    file_text_readln(fileid);
 	    if (!global.overridefullscreen) {
-			scr_fullscreen(1, global.fullscreen);
+			fullscreen_set(global.fullscreen);
 		}
 	    global.windowed = real(file_text_read_string(fileid));
 	    file_text_readln(fileid);

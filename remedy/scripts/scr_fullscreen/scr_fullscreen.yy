@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "compatibility",
-    "path": "folders/Scripts/compatibility.yy",
+    "name": "fullscreen",
+    "path": "folders/Scripts/fullscreen.yy",
   },
 }

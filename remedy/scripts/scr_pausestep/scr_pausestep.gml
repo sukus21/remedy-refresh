@@ -66,12 +66,12 @@ function scr_pausestep() {
 	    else if (tier==1){
 			if (!global.is_mobile) {
 		        if (global.pauseselected == 1) {
-		            scr_fullscreen(1, !scr_fullscreen(0, 0));
+		            fullscreen_set(!fullscreen_get());
 		            sfx_play(snd_select);
 		        }
 		        else if (global.pauseselected == 2) {
 					global.windowed = option_advance(global.windowed+1, 8, 1);
-		            if (!scr_fullscreen(0, 0)) scr_scalewindow();
+		            if (!fullscreen_get()) scale_window();
 		            sfx_play(snd_select);
 		        }
 			}
@@ -173,16 +173,16 @@ function scr_pausestep() {
 		            global.windowed -= 1;
 		            if (global.windowed < 1)
 		                global.windowed = 8;
-		            if (scr_fullscreen(0,0) == 0)
-		                scr_scalewindow();
+		            if (!fullscreen_get())
+		                scale_window();
 		            sfx_play(snd_select);
 		            }
 		        else if (pressright && !pressrightprev) {
 		            global.windowed += 1;
 		            if (global.windowed > 8)
 		                global.windowed = 1;
-		            if (scr_fullscreen(0,0) == 0)
-		                scr_scalewindow();
+		            if (!fullscreen_get())
+		                scale_window();
 		            sfx_play(snd_select);
 	            }
 	        }
@@ -303,7 +303,7 @@ function scr_pausestep() {
 		textstring = "Back#";
 		if(!global.is_mobile) {
 		    textstring += "Fullscreen ";
-			textstring += scr_fullscreen(0, 1) ? "ON#" : "OFF#";   
+			textstring += fullscreen_get() ? "ON#" : "OFF#";   
 		    textstring += "Windowed size x" + string(global.windowed) + "#";
 		}
 		else {

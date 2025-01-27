@@ -1,17 +1,20 @@
-function scr_fullscreen(argument0, argument1) {
-	//switches between windowed and fullscreen
-	//argument0 0 = get fullscreen
-	//argument0 1 = set fullscreen
-	//argument1 = what to set the fullscreen to
+function fullscreen_set(_enable) {
+	window_set_fullscreen(_enable);
+	if (!_enable) {
+		scale_window();
+	}
+}
 
-	if (argument0==0)
-	    return window_get_fullscreen();
-	else if (argument0==1){
-	    window_set_fullscreen(argument1);
-	    if (argument1==0)
-	        scr_scalewindow();
-	    }
+function fullscreen_get() {
+	return window_get_fullscreen();
+}
 
+// Scales the window
+function scale_window() {
+	if (global.windowed < 1 || global.windowed > 8) {
+	    global.windowed = 2;
+	}
 
-
+	window_set_size(160*global.windowed, 140*global.windowed);
+	window_center();
 }
