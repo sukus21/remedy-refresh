@@ -184,8 +184,7 @@ function scr_sabotdraw() {
 	        hidelocmessage=1;
 	    }
 	if (!hidelocmessage && locmescyc>=3){
-	    scr_drawext(spr_locationmessage,2,1,get_xview(),get_yview());
-	    //draw_sprite_ext(spr_locationmessage,1,get_xview(),get_yview(),1,1,0,global.bgcolor,1);
+	    draw_sprite_ext(spr_locationmessage, 1, get_xview(), get_yview(), 1, 1, 0, global.bgcolor, 1);
 	    draw_sprite(spr_locationmessage,0,get_xview(),get_yview());
 	    xoff=(get_wview()/2)-string_length(loctext)*4;
 	    scr_drawtext(get_xview()+xoff,get_yview()+3,loctext,8,spr_text);

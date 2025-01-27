@@ -144,7 +144,6 @@
     {"id":{"name":"scr_findhearts","path":"scripts/scr_findhearts/scr_findhearts.yy",},"order":4,},
     {"id":{"name":"scr_finddifficulty","path":"scripts/scr_finddifficulty/scr_finddifficulty.yy",},"order":5,},
     {"id":{"name":"scr_pressf4","path":"scripts/scr_pressf4/scr_pressf4.yy",},"order":0,},
-    {"id":{"name":"scr_drawext","path":"scripts/scr_drawext/scr_drawext.yy",},"order":0,},
     {"id":{"name":"scr_fullscreen","path":"scripts/scr_fullscreen/scr_fullscreen.yy",},"order":1,},
     {"id":{"name":"joystick_check_button","path":"scripts/joystick_check_button/joystick_check_button.yy",},"order":0,},
     {"id":{"name":"joystick_direction","path":"scripts/joystick_direction/joystick_direction.yy",},"order":1,},

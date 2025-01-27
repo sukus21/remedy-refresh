@@ -1,7 +1,6 @@
 function scr_pausedraw() {
 	//draw
-	scr_drawext(spr_pause2,1,0,x,y);
-	//draw_sprite_ext(spr_pause2,0,x,y,1,1,0,global.bgcolor,1);
+	draw_sprite_ext(spr_pause2, 0, x, y, 1, 1, 0, global.bgcolor, 1);
 	if (tier==0)
 	    draw_sprite(spr_pause,0,x,y);
 	else if (tier==1 || tier==2)

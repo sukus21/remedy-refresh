@@ -18,8 +18,7 @@ function scr_battlesabotdraw() {
 	        }
 	    if (introcyc<40){
 	        for (i=0;i<drawbanner;i+=1){
-	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
-	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
+				draw_sprite_ext(spr_message1, 10, get_xview()+0+i*16, get_yview()+52, 1, 1, 0, global.bgcolor, 1);
 	            draw_sprite(spr_message1,i+healmodeflash*12,get_xview()+0+i*16,get_yview()+52);
 	            }
 	        }
@@ -27,8 +26,7 @@ function scr_battlesabotdraw() {
 	        drawbanner-=1;
 	    if (introcyc>=40 && introcyc<60){
 	        for (i=10-drawbanner;i<10;i+=1){
-	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
-	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
+				draw_sprite_ext(spr_message1, 10, get_xview()+0+i*16, get_yview()+52, 1, 1, 0, global.bgcolor, 1);
 	            draw_sprite(spr_message1,i+healmodeflash*12,get_xview()+0+i*16,get_yview()+52);
 	            }
 	        }
@@ -60,22 +58,19 @@ function scr_battlesabotdraw() {
     
 	    dollys+=dollyacc;
 	    dolly+=dollys;
-	    scr_drawext(spr_black,0,1,dollx-8,dolly-8);
-	    //draw_sprite_ext(spr_black,1,dollx-8,dolly-8,1,1,0,global.bgcolor,1);
+	    draw_sprite_ext(spr_black, 1, dollx-8, dolly-8, 1, 1, 0, global.bgcolor, 1);
 	    draw_sprite(spr_you,6,dollx,dolly);
 	    if (victorycyc<1000)
 	        victorycyc+=1;
 	    if (victorycyc>=15){
-	        scr_drawext(spr_rewardline,1,0,get_xview()+24,get_yview()+72);
-	        //draw_sprite_ext(spr_rewardline,0,get_xview()+24,get_yview()+72,1,1,0,global.bgcolor,1);
+	        draw_sprite_ext(spr_rewardline, 0, get_xview()+24, get_yview()+72, 1, 1, 0, global.bgcolor, 1);
 	        scr_drawtext(get_xview()+32,get_yview()+80,"YOU GOT A >!",8,spr_text);
 	        }
 	    if (victorycyc>=15 && victorycyc<=25)
 	        drawvictory+=1;
 	    if (victorycyc>=0){
 	        for (i=0;i<drawvictory;i+=1){
-	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
-	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
+	            draw_sprite_ext(spr_message1, 10, get_xview()+0+i*16, get_yview()+52, 1, 1, 0, global.bgcolor, 1);
 	            draw_sprite(spr_message2,i,get_xview()+0+i*16,get_yview()+52);
 	            }
 	        }
@@ -89,12 +84,10 @@ function scr_battlesabotdraw() {
 	//failure
 	//takes priority over victory
 	if (failure){
-	    scr_drawext(spr_pause2,1,0,get_xview()+0,get_yview()+0);
-	    //draw_sprite_ext(spr_pause2,0,get_xview()+0,get_yview()+0,1,1,0,global.bgcolor,1);
+	    draw_sprite_ext(spr_pause2, 0, get_xview()+0, get_yview()+0, 1, 1, 0, global.bgcolor, 1);
 	    dollys+=dollyacc;
 	    dolly+=dollys;
-	    scr_drawext(spr_black,0,1,dollx-8,dolly-8);
-	    //draw_sprite_ext(spr_black,1,dollx-8,dolly-8,1,1,0,global.bgcolor,1);
+	    draw_sprite_ext(spr_black, 1, dollx-8, dolly-8, 1, 1, 0, global.bgcolor, 1);
 	    draw_sprite(spr_you,6,dollx,dolly);
     
 	    failurecyc+=1;
@@ -102,8 +95,7 @@ function scr_battlesabotdraw() {
 	        drawfailure+=1;
 	    if (failurecyc>0){
 	        for (i=0;i<drawfailure;i+=1){
-	            scr_drawext(spr_message1,11,10,get_xview()+0+i*16,get_yview()+52);
-	            //draw_sprite_ext(spr_message1,10,get_xview()+0+i*16,get_yview()+52,1,1,0,global.bgcolor,1);
+	            draw_sprite_ext(spr_message1, 10, get_xview()+0+i*16, get_yview()+52, 1, 1, 0, global.bgcolor, 1);
 	            draw_sprite(spr_message2,i+10,get_xview()+0+i*16,get_yview()+52);
 	            }
 	        }

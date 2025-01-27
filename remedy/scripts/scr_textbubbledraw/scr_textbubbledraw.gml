@@ -1,6 +1,5 @@
 function scr_textbubbledraw() {
-	scr_drawext(spr_textbubble2,1,0,x,y);
-	//draw_sprite_ext(spr_textbubble2,1,x,y,1,1,0,global.bgcolor,1);
+	draw_sprite_ext(spr_textbubble2, 1, x, y, 1, 1, 0, global.bgcolor, 1);
 	draw_sprite(sprite_index,image_single,x,y+nudge);
 	scr_drawtext(x+8,y+3+nudge*2,finaltext,8,spr_text);
 	if (talktonpc && !marry)
