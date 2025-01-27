@@ -84,3 +84,5 @@ pressrightprev = 0;
 pressright = 0;
 __res = 0;
 var_layer = 0;
+
+background_layer = get_background();

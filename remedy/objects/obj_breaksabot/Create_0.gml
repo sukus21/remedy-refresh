@@ -44,6 +44,9 @@ fileid = 0;
 //Below are the original contents of the file.
 scr_joycreate();
 scr_createtext();
-repeat(10)
+repeat(10) {
     instance_create_depth(16+random(128),16+random(108),0,obj_breakobject);
+}
+
+background_layer = get_background();
 

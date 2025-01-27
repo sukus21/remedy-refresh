@@ -78,3 +78,6 @@ pressright = 0;
 pressescapeprev = 0;
 pressescape = 0;
 __res = 0;
+
+// Find background layer
+background_layer = get_background();

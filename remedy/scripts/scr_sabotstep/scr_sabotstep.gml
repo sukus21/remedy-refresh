@@ -411,9 +411,6 @@ function scr_sabotstep() {
 	if (global.flashb>=250)
 	    global.flashb=250;
 	global.bgcolor=make_color_rgb(global.flashr,global.flashg,global.flashb);
-
-	__background_set_colour( global.bgcolor );
-
-
-
+	
+	layer_background_blend(background_layer, global.bgcolor);
 }
